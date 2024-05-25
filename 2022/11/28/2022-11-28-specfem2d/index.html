@@ -1,0 +1,1312 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Specfem2d, erbiaoger">
+    <meta name="description" content="#Specfem
+Par_file simulation input parameters title of job1title				=	Specfem2d
+forward or adjont simulation123456SIMULA">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Specfem2d | erbiaoger</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="erbiaoger" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">erbiaoger</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-index" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle-o" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/music">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Music</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">erbiaoger</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-index"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle-o"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/music " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Music</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Specfem2d</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/specfem/">
+                                <span class="chip bg-color">specfem</span>
+                            </a>
+                        
+                            <a href="/tags/forward/">
+                                <span class="chip bg-color">forward</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-11-28
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>#Specfem</p>
+<h2 id="Par-file"><a href="#Par-file" class="headerlink" title="Par_file"></a>Par_file</h2><h3 id="simulation-input-parameters"><a href="#simulation-input-parameters" class="headerlink" title=" simulation input parameters "></a><center> simulation input parameters </center></h3><h5 id="title-of-job"><a href="#title-of-job" class="headerlink" title="title of job"></a>title of job</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title				=	Specfem2d</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="forward-or-adjont-simulation"><a href="#forward-or-adjont-simulation" class="headerlink" title="forward or adjont simulation"></a>forward or adjont simulation</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SIMULATION<span class="emphasis">_TYPE		=	1</span></span><br><span class="line"><span class="emphasis">&lt;!-- 1 = forward, 2 = adjoint, 3 = both sumulataneously --&gt; </span></span><br><span class="line"><span class="emphasis">NOISE_</span>TOMOGRAPHY	=	0</span><br><span class="line">&lt;!-- 0 = regular wave propagation simulation, 1/2/3 = noise simulation --&gt; </span><br><span class="line">SAVE<span class="emphasis">_FORWARD		=	.false.</span></span><br><span class="line"><span class="emphasis">&lt;!-- save the last frame, needed for adjoint simulation --&gt; </span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="parameters-concerning-partitioning"><a href="#parameters-concerning-partitioning" class="headerlink" title="parameters concerning partitioning"></a>parameters concerning partitioning</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NPROC				=	4</span><br><span class="line">partitioning<span class="emphasis">_method	=	3</span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="number-of-control-nodes-pre-element-4-or-9"><a href="#number-of-control-nodes-pre-element-4-or-9" class="headerlink" title="number of control nodes pre element (4 or 9)"></a>number of control nodes pre element (4 or 9)</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ngnod				=	9</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="time-step-parameters"><a href="#time-step-parameters" class="headerlink" title="time step parameters"></a>time step parameters</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NSTEP				=	1600</span><br><span class="line">&lt;!-- total number of time steps --&gt; </span><br><span class="line">DT					=	1.1d-3</span><br><span class="line">&lt;!-- duration of a time step --&gt; </span><br></pre></td></tr></tbody></table></figure>
+<h5 id="time-stepping"><a href="#time-stepping" class="headerlink" title="time stepping"></a>time stepping</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">time<span class="emphasis">_stepping_</span>scheme=	1</span><br><span class="line">&lt;!-- 1 = Newmark, 2 = LDDRK4-6, 3 = classical RK4 4th-order 4-stage Runge-Kutta --&gt; </span><br></pre></td></tr></tbody></table></figure>
+<h5 id="axisymmetric-2-5D-or-Cartesian-plannar-2D-simulation"><a href="#axisymmetric-2-5D-or-Cartesian-plannar-2D-simulation" class="headerlink" title="axisymmetric (2.5D) or Cartesian plannar (2D) simulation"></a>axisymmetric (2.5D) or Cartesian plannar (2D) simulation</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AXISYM				=	.false.</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="set-the-type-of-calculation-P-SV-or-SH-membrane-waves"><a href="#set-the-type-of-calculation-P-SV-or-SH-membrane-waves" class="headerlink" title="set the type of calculation (P_SV or SH/membrane waves)"></a>set the type of calculation (P_SV or SH/membrane waves)</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P<span class="emphasis">_SV				=	.true.</span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="set-to-true-to-use-GPUs"><a href="#set-to-true-to-use-GPUs" class="headerlink" title="set to true to use GPUs"></a>set to true to use GPUs</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPU<span class="emphasis">_MODO			=	.false.</span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="creates-reads-a-binary-database-that-allows-to-skip-all-time-consuming-setup-steps-in-initialization"><a href="#creates-reads-a-binary-database-that-allows-to-skip-all-time-consuming-setup-steps-in-initialization" class="headerlink" title="creates/reads a binary database that allows to skip all time consuming setup steps in initialization"></a>creates/reads a binary database that allows to skip all time consuming setup steps in initialization</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setup<span class="emphasis">_with_</span>binary<span class="emphasis">_database	=	0</span></span><br><span class="line"><span class="emphasis">&lt;!-- 0 = does not read/create database --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- 1 = creates database --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- 2 = reads database --&gt; </span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="available-models"><a href="#available-models" class="headerlink" title="available models"></a>available models</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MODEL				=	default</span><br><span class="line">&lt;!-- default       - define model using nbmodels below --&gt;</span><br><span class="line">&lt;!-- ascii         - read model from ascii database file --&gt;</span><br><span class="line">&lt;!-- binary        - read model from binary databse file --&gt;</span><br><span class="line">&lt;!-- binary<span class="emphasis">_voigt  - read Voigt model from binary database file --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- external      - define model using define_</span>external<span class="emphasis">_model subroutine --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- gll           - read GLL model from binary database file --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- legacy        - read model from model_</span>velocity.dat<span class="emphasis">_input --&gt;</span></span><br><span class="line"><span class="emphasis">SAVE_</span>MODEL			=	default</span><br><span class="line">&lt;!-- Output the model with the requested type, does not save if turn to default or .false. --&gt;</span><br><span class="line">&lt;!-- (available output formats: ascii, binary, gll, legacy) --&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="attenuation"><a href="#attenuation" class="headerlink" title=" attenuation "></a><center> attenuation </center></h3><h5 id="attenuation-parameters"><a href="#attenuation-parameters" class="headerlink" title="attenuation parameters"></a>attenuation parameters</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ATTENUATION<span class="emphasis">_VISCOELASTIC	=	.false.</span></span><br><span class="line"><span class="emphasis">&lt;!-- turn attenuation (viscoelasticity) on or off for non-poroelastic solid parts of the model --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 为模型的非多孔弹性实体部分打开或关闭衰减（粘弹性） --&gt; </span></span><br><span class="line"><span class="emphasis">ATTENUATION_</span>VISCOACOUSTIC	=	.false.</span><br><span class="line">&lt;!-- turn attenuation (viscoacousticity) on or off for non-prooelastic fluid parts of the model --&gt; </span><br><span class="line">&lt;!-- 为模型的非弹性流体部分打开或关闭衰减（粘声性） --&gt; </span><br></pre></td></tr></tbody></table></figure>
+<h5 id="for-viscoelastic-attenuation"><a href="#for-viscoelastic-attenuation" class="headerlink" title="for viscoelastic attenuation"></a>for viscoelastic attenuation</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">N<span class="emphasis">_SLS						=	3</span></span><br><span class="line"><span class="emphasis">&lt;!-- number of standard linear solids for attenuation (3 is usually the minimum) --&gt; </span></span><br><span class="line"><span class="emphasis">ATTENUATION_</span>f0<span class="emphasis">_REFERENCE	=	5.196</span></span><br><span class="line"><span class="emphasis">&lt;!-- in case of attenuation, reference frequency in Hz at which the velocity values in the velcity model are givem (unused othervise); relevant only if source is a Dirac or a Heaviside, otherwise it is automatically set to f0 the dominant frequency of the source in the DATA/SOURCE file --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 在衰减的情况下，给出速度模型中速度值的参考频率（Hz）（未使用的其他方式）； 仅当源是 Dirac 或 Heaviside 时才相关，否则它会自动设置为 f0 数据/源文件中源的主频率 --&gt;</span></span><br><span class="line"><span class="emphasis">READ_</span>VELOCITIES<span class="emphasis">_AI_</span>f0		=	.false.</span><br><span class="line">&lt;!-- read seismic velocities at ATTENUATION<span class="emphasis">_f0_</span>REFERENCE instead of at infinite frequency (see user manual for more information) --&gt; </span><br><span class="line">USE<span class="emphasis">_SOLVOPT					=	.false.</span></span><br><span class="line"><span class="emphasis">&lt;!-- use more precise but much more expensive way of determining the Q factor relaxation times, as in http://komatitsch.free.fr/preprints/GJI_</span>Lombard<span class="emphasis">_2016.pdf</span></span><br><span class="line"><span class="emphasis"> --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 使用更精确但更昂贵的方法来确定 Q 因子弛豫时间 --&gt; </span></span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="for-poroelastic-attenuation"><a href="#for-poroelastic-attenuation" class="headerlink" title="for poroelastic attenuation"></a>for poroelastic attenuation</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ATTENUATION<span class="emphasis">_PORO_</span>FLUID<span class="emphasis">_PART	=	.false.</span></span><br><span class="line"><span class="emphasis">&lt;!-- turn viscous attenuation on or off for the fluid part of poroelastic parts of the model --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 打开或关闭模型多孔弹性部分的流体部分的粘性衰减 --&gt; </span></span><br><span class="line"><span class="emphasis">Q0_</span>poroelastic				=	1</span><br><span class="line">&lt;!-- quality factor for viscous attenuation (ignore it if you are not using a poroelastic material) --&gt; </span><br><span class="line">&lt;!-- 粘性衰减的品质因数（如果您不使用多孔弹性材料，请忽略它） --&gt; </span><br><span class="line">freq0<span class="emphasis">_poroelastic			=	10</span></span><br><span class="line"><span class="emphasis">&lt;!-- frequency for viscous attenuation (ignore it if you are not using a poroelastic material) --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 粘性衰减的频率（如果您不使用多孔弹性材料，请忽略它） --&gt; </span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&lt;!-- to undo attenuation and/or PMLs for sensitivity kernel calculations or forward runs with SAVE_</span>FORWARD --&gt;</span><br><span class="line">&lt;!-- use the flag below. It performs undoing of attenuation and/or of PMLs in an exact way for sensitivity kernel calculations --&gt;</span><br><span class="line">&lt;!-- but requires disk space for temporary storage, and uses a significant amount of memory used as buffers for temporary storage. --&gt;</span><br><span class="line">&lt;!-- When that option is on the second parameter indicates how often the code dumps restart files to disk (if in doubt, use something between 100 and 1000). --&gt;</span><br><span class="line">&lt;!-- 使用 SAVE<span class="emphasis">_FORWARD 撤消衰减和/或 PML 以进行灵敏度内核计算或前向运行 --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- 使用下面的标志。 它以精确的方式执行衰减和/或 PML 的撤销以进行灵敏度核计算 --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- 但需要磁盘空间用于临时存储，并使用大量内存用作临时存储的缓冲区。 --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- 当该选项位于第二个参数上时，表示代码将重新启动文件转储到磁盘的频率（如果有疑问，请使用 100 到 1000 之间的值）。 --&gt;</span></span><br><span class="line"><span class="emphasis">UNDO_</span>ATTENUATION<span class="emphasis">_AND_</span>OR<span class="emphasis">_PML	=	.false.</span></span><br><span class="line"><span class="emphasis">NT_</span>DUMP<span class="emphasis">_ATTENUATION			=	500</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&lt;!-- Instead of reconstructing the forward wavefield, this option reads it from the disk using asynchronous I/O. --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- Outperforms conventional mode using a value of NSTEP_</span>BETWEEN<span class="emphasis">_COMPUTE_</span>KERNELS high enough. --&gt;</span><br><span class="line">&lt;!-- 该选项不是重建前向波场，而是使用异步 I/O 从磁盘读取它。 --&gt;</span><br><span class="line">&lt;!-- 使用足够高的 NSTEP<span class="emphasis">_BETWEEN_</span>COMPUTE<span class="emphasis">_KERNELS 值优于传统模式。--&gt;</span></span><br><span class="line"><span class="emphasis">NO_</span>BACKWARD<span class="emphasis">_RECONSTRUCTION	=	.false.</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="source"><a href="#source" class="headerlink" title=" source "></a><center> source </center></h3><h5 id="source-parameters"><a href="#source-parameters" class="headerlink" title="source parameters"></a>source parameters</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">NSOURCE			=	1</span><br><span class="line">&lt;!-- number of sources (source informfation is then read from the DATA/SOURCE file) --&gt; </span><br><span class="line"></span><br><span class="line">force<span class="emphasis">_normal_</span>to+surface		=	.false.</span><br><span class="line">&lt;!-- angleforce normal to surface (external mesh and curve file needed) --&gt; </span><br><span class="line">&lt;!-- 垂直于表面的角力（需要外部网格和曲线文件）--&gt;</span><br><span class="line">&lt;!-- use an existing initial wave field as source or start from zero (medium initially at rest) --&gt; </span><br><span class="line">&lt;!-- 使用现有的初始波场作为源或从零开始（介质最初处于静止状态）--&gt;</span><br><span class="line">initialfield				=	.false.</span><br><span class="line">add<span class="emphasis">_Bielak_</span>conditions<span class="emphasis">_bottom=	.false.</span></span><br><span class="line"><span class="emphasis">&lt;!-- add Bielak conditions or not if initial plane wave --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 如果初始平面波是否添加 Bielak 条件 --&gt;</span></span><br><span class="line"><span class="emphasis">add_</span>Bielak<span class="emphasis">_conditions_</span>right	=	.false.</span><br><span class="line">add<span class="emphasis">_Bielak_</span>conditions<span class="emphasis">_top	=	.false.</span></span><br><span class="line"><span class="emphasis">add_</span>Bielak<span class="emphasis">_conditions_</span>left	=	.false.</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="acoustic-forcing"><a href="#acoustic-forcing" class="headerlink" title="acoustic forcing"></a>acoustic forcing</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ACOUSTIC<span class="emphasis">_FORCING			=	.false.</span></span><br><span class="line"><span class="emphasis">&lt;!-- acoustic forcing of an acoustic medium with a rigid interface --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 具有刚性界面的声学介质的声强迫 --&gt;```</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="receivers"><a href="#receivers" class="headerlink" title=" receivers "></a><center> receivers </center></h3><h5 id="receiver-set-parameters-for-recording-stations-i-e-recording-points"><a href="#receiver-set-parameters-for-recording-stations-i-e-recording-points" class="headerlink" title="receiver set parameters for recording stations (i.e. recording points)"></a>receiver set parameters for recording stations (i.e. recording points)</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">seismotype					=	1</span><br><span class="line">&lt;!-- record 1 = displ, 2 = veloc, 3 = accel, 4 = pressure, 5 = curl of displ, 6 = the fluid potential --&gt; </span><br></pre></td></tr></tbody></table></figure>
+<h5 id="subsampling-of-the-seismograms-to-create-smaller-files-butless-accurately-sampled-in-time"><a href="#subsampling-of-the-seismograms-to-create-smaller-files-butless-accurately-sampled-in-time" class="headerlink" title="subsampling of the seismograms to create smaller files (butless accurately sampled in time)"></a>subsampling of the seismograms to create smaller files (butless accurately sampled in time)</h5><!-- 对地震图进行二次采样以创建更小的文件（但采样时间不太准确） -->
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subsamp<span class="emphasis">_siesmos				=	1</span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="so-far-this-option-can-only-be-used-if-all-the-receivers-are-in-acoustic-elements"><a href="#so-far-this-option-can-only-be-used-if-all-the-receivers-are-in-acoustic-elements" class="headerlink" title="so far, this option can only be used if all the receivers are in acoustic elements"></a>so far, this option can only be used if all the receivers are in acoustic elements</h5><!-- 到目前为止，只有当所有接收器都在声学元中时才能使用此选项 --> 
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE<span class="emphasis">_TRICL_</span>FOR<span class="emphasis">_BETTER_</span>PRESSURE	=	.false.</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="every-how-many-time-steps-we-save-the-seismograms"><a href="#every-how-many-time-steps-we-save-the-seismograms" class="headerlink" title="every how many time steps we save the seismograms"></a>every how many time steps we save the seismograms</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- (costly, do not use a very small value; if you use a very large value that is larger than the total number of time steps of the run, the seismograms will automatically be saved once at the end of the run anyway)&lt;++&gt; --&gt; </span><br><span class="line">&lt;!-- (代价高昂，不要使用非常小的值；如果使用的值大于运行的总时间步数，则无论如何都会在运行结束时自动保存一次地震图 ) --&gt;</span><br><span class="line">NSTEP<span class="emphasis">_BETWEEN_</span>OUTPUT<span class="emphasis">_SEISMOS	=	1000</span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="use-this-t0-as-earliest-satrting-time-rather-than-the-automatically-calculated-one"><a href="#use-this-t0-as-earliest-satrting-time-rather-than-the-automatically-calculated-one" class="headerlink" title="use this t0 as earliest satrting time rather than the automatically calculated one"></a>use this t0 as earliest satrting time rather than the automatically calculated one</h5><!-- 使用这个 t0 作为最早的开始时间而不是自动计算的时间 --> 
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USER<span class="emphasis">_T0							=	0.0d0</span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="seismogram-formats"><a href="#seismogram-formats" class="headerlink" title="seismogram formats"></a>seismogram formats</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">save<span class="emphasis">_ASCII_</span>seismograms			=	.true.</span><br><span class="line">&lt;!-- save seismograms in ASCII format or not --&gt; </span><br><span class="line">save<span class="emphasis">_binary_</span>seismograms<span class="emphasis">_single	=	.true.</span></span><br><span class="line"><span class="emphasis">&lt;!-- save seismograms in single precision binary format or not (can be used jointly with ASCII above to save both) --&gt; </span></span><br><span class="line"><span class="emphasis">save_</span>binary<span class="emphasis">_seismograms_</span>double	=	.false.</span><br><span class="line">&lt;!-- save seismograms in double precision binary format or not (can be used jointly with both flags above to save all) --&gt; </span><br><span class="line">SU<span class="emphasis">_FORMAT						=	.false.</span></span><br><span class="line"><span class="emphasis">&lt;!-- output single precision binary seismograms in Seismic Unix format (adjoint traces will be read in the same format) --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 以 Seismic Unix 格式输出单精度二进制地震图（以相同格式读取伴随轨迹） --&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="use-an-existing-STATION-file-found-in-DATA-or-create-a-new-one-from-the-receiver-positions-below-in-this-Par-file"><a href="#use-an-existing-STATION-file-found-in-DATA-or-create-a-new-one-from-the-receiver-positions-below-in-this-Par-file" class="headerlink" title="use an existing STATION file found in ./DATA or create a new one from the receiver positions below in this Par_file"></a>use an existing STATION file found in ./DATA or create a new one from the receiver positions below in this Par_file</h5><!-- 使用在 ./DATA 中找到的现有 STATION 文件或从此 Par_file 中的以下接收器位置创建一个新文件 --> 
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use<span class="emphasis">_existing_</span>STATIONS			=	.false.</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="number-of-receiver-sets-i-e-number-of-receiver-lines-to-create-below"><a href="#number-of-receiver-sets-i-e-number-of-receiver-lines-to-create-below" class="headerlink" title="number of receiver sets (i.e. number of receiver lines to create below)"></a>number of receiver sets (i.e. number of receiver lines to create below)</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nreceiversets					=	2</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="orientation"><a href="#orientation" class="headerlink" title="orientation"></a>orientation</h5><!-- 方向 --> 
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">anglerec						=	0.d0</span><br><span class="line">&lt;!-- angle to rotate components at receivers --&gt; </span><br><span class="line">&lt;!-- 在接收器处旋转组件的角度 --&gt;</span><br><span class="line">rec<span class="emphasis">_normal_</span>to<span class="emphasis">_surface			=	.false.</span></span><br><span class="line"><span class="emphasis">&lt;!-- base anglerec normal to surface (external mesh and curve file needed) --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 基础角度检波器与表面垂直（需要外部网格和曲线文件）--&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="first-receiver-set-repeat-these-6-lines-and-adjust-nreceiversets-accordingly"><a href="#first-receiver-set-repeat-these-6-lines-and-adjust-nreceiversets-accordingly" class="headerlink" title="first receiver set (repeat these 6 lines and adjust nreceiversets accordingly)"></a>first receiver set (repeat these 6 lines and adjust nreceiversets accordingly)</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">nrec							=	11</span><br><span class="line">&lt;!-- number of receivers --&gt; </span><br><span class="line">xdeb							=	300.</span><br><span class="line">&lt;!-- first receiver x in meters --&gt; </span><br><span class="line">zdeb							=	2200.</span><br><span class="line">&lt;!-- first receiver z in meters --&gt; </span><br><span class="line">xfin							=	3700.</span><br><span class="line">&lt;!-- last receiver x in meters (ignored if only one receiver) --&gt; </span><br><span class="line">zfin							=	2200.</span><br><span class="line">&lt;!-- last receiver z in meters (ignored if only one receiver) --&gt; </span><br><span class="line">record<span class="emphasis">_at_</span>surface<span class="emphasis">_same_</span>vertical	=	.true.</span><br><span class="line">&lt;!-- receivers inside the medium or at the surface (z values are ignored if this is set to true, they are replaced with the topography height) --&gt; </span><br><span class="line">&lt;!-- 介质内部或表面的接收器（如果设置为 true，z 值将被忽略，它们会被地形高度替换）--&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="second-revceiver-set"><a href="#second-revceiver-set" class="headerlink" title="second revceiver set"></a>second revceiver set</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nrec							=	11</span><br><span class="line">xdeb							=	2500.</span><br><span class="line">zdeb							=	2500.</span><br><span class="line">xfin							=	1500.</span><br><span class="line">zfin							=	0.</span><br><span class="line">record<span class="emphasis">_at_</span>surface<span class="emphasis">_same_</span>vertical	=	.false.</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="adjoint-kernel-outputs"><a href="#adjoint-kernel-outputs" class="headerlink" title=" adjoint kernel outputs "></a><center> adjoint kernel outputs </center></h3><h5 id="save-sensitivity-kernels-in-ASCII-format-much-bigger-files-but-compatible-with-current-GMT-scripts-or-in-binary-format"><a href="#save-sensitivity-kernels-in-ASCII-format-much-bigger-files-but-compatible-with-current-GMT-scripts-or-in-binary-format" class="headerlink" title="save sensitivity kernels in ASCII format (much bigger files, but compatible with current GMT scripts) or in binary format"></a>save sensitivity kernels in ASCII format (much bigger files, but compatible with current GMT scripts) or in binary format</h5><!-- 以 ASCII 格式（更大的文件，但与当前的 GMT 脚本兼容）或二进制格式保存敏感内核 -->
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">save<span class="emphasis">_ASCII_</span>kernels				=	.true.</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="since-the-accuracy-of-kernel-integration-may-not-need-to-respect-the-CFL-this-option-permits-to-save-computing-time-and-memory-with-UNDO-ATTENUATION-AND-OR-PML-mode"><a href="#since-the-accuracy-of-kernel-integration-may-not-need-to-respect-the-CFL-this-option-permits-to-save-computing-time-and-memory-with-UNDO-ATTENUATION-AND-OR-PML-mode" class="headerlink" title="since the accuracy of kernel integration may not need to respect the CFL, this option permits to save computing time, and memory with UNDO_ATTENUATION_AND_OR_PML mode"></a>since the accuracy of kernel integration may not need to respect the CFL, this option permits to save computing time, and memory with UNDO_ATTENUATION_AND_OR_PML mode</h5><!-- 由于内核集成的准确性可能不需要尊重 CFL，此选项允许使用 UNDO_ATTENUATION_AND_OR_PML 模式节省计算时间和内存 --> 
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSTEP<span class="emphasis">_BETEEN_</span>COMPUTE<span class="emphasis">_KERNELS	=	1</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="boundary-confitions"><a href="#boundary-confitions" class="headerlink" title=" boundary confitions "></a><center> boundary confitions </center></h3><h4 id="Perfectly-Matched-Layer-PML-boundaries"><a href="#Perfectly-Matched-Layer-PML-boundaries" class="headerlink" title="Perfectly Matched Layer (PML) boundaries"></a>Perfectly Matched Layer (PML) boundaries</h4><!-- 完美匹配层 (PML) 边界 --> 
+<h5 id="absorbings-boundary-active-or-not"><a href="#absorbings-boundary-active-or-not" class="headerlink" title="absorbings boundary active or not"></a>absorbings boundary active or not</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">PML<span class="emphasis">_BOUNDARY_</span>CONDITIONS			=	.true.</span><br><span class="line">NELEM<span class="emphasis">_PML_</span>THICKNESS				=	3</span><br><span class="line">ROTATE<span class="emphasis">_PML_</span>ACTIVATE				=	.false.</span><br><span class="line">ROTATE<span class="emphasis">_PML_</span>ANGLE				=	30.</span><br><span class="line">&lt;!-- change the four parameters below only if you know what you are doing; they change the damping progiles inside the PMLs --&gt; </span><br><span class="line">&lt;!-- 仅在知道自己在做什么时才更改以下四个参数； 他们改变了 PML 内的阻尼特性 --&gt;</span><br><span class="line">K<span class="emphasis">_MIN_</span>PML						=	1.0d0</span><br><span class="line">K<span class="emphasis">_MAX_</span>PML						=	1.0d0</span><br><span class="line">damping<span class="emphasis">_change_</span>factor<span class="emphasis">_acoustic	=	0.5d0</span></span><br><span class="line"><span class="emphasis">damping_</span>change<span class="emphasis">_factor_</span>elastic	=	1.0d0</span><br><span class="line">&lt;!-- set the parameter below to .false. unless you know what you are doing; this implements automatic adjustment of the PML parametersfor elongated models. --&gt;</span><br><span class="line">&lt;!-- 将下面的参数设置为 .false。 除非你知道自己在做什么； 这实现了细长模型的 PML 参数的自动调整。 --&gt;</span><br><span class="line">&lt;!-- The goal is to improve the absorbing efficiency of PML for waves with large incidence angles, but this can lead to artefacts. --&gt; </span><br><span class="line">&lt;!-- 目标是提高 PML 对大入射角波的吸收效率，但这会导致伪影。 --&gt;</span><br><span class="line">&lt;!-- In particular, this option is efficient only when the number of sources NSOURCES is equal to one --&gt; </span><br><span class="line">&lt;!-- 特别是，这个选项只有在源NSOURCES的数量等于1时才有效--&gt;</span><br><span class="line">PML<span class="emphasis">_PARAMETER_</span>ADJUSTMENT		=	.false.</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="Stacey-ABC"><a href="#Stacey-ABC" class="headerlink" title="Stacey ABC"></a>Stacey ABC</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STACEY<span class="emphasis">_ABSORBING_</span>CONDITIONS		=	.false.</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="periodic-boundaries"><a href="#periodic-boundaries" class="headerlink" title="periodic boundaries"></a>periodic boundaries</h5><!-- 周期性边界 --> 
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ADD<span class="emphasis">_PERIODIC_</span>CONDITIONS			=	.false.</span><br><span class="line">PERIODIC<span class="emphasis">_HORIZ_</span>DIST				=	4000.d0</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="velocity-and-density-models"><a href="#velocity-and-density-models" class="headerlink" title="velocity and density models "></a><center>velocity and density models </center></h3><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">nbmodels						=	4</span><br><span class="line">&lt;!-- available material types  --&gt; </span><br><span class="line">&lt;!-- 可用的材料类型 --&gt;</span><br><span class="line">&lt;!-- acoustic:	model<span class="emphasis">_number	1	rho	Vp	0	0	0	QKappa	9999	0	0	0	0	0	0	(for QKappa use 9999 to ignore it) --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- elastic:	model_</span>number	1	rho	Vp	Vs	0	0	QKappa	Qmu		0	0	0	0	0	0	(for QKappa and Qmu use 9999 to ignore them) --&gt; </span><br><span class="line">&lt;!-- when viscoelasticity or viscoacousticity is turned on, the Vp and Vs values that are read here are the UNTELAXED ones i.e. the values at infinite frequency unless the READ<span class="emphasis">_VELOCITIES_</span>AT<span class="emphasis">_f0 parameter above is set to true, in which case they are the values at frequency f0 --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- 当粘弹性或粘声性打开时，这里读取的 Vp 和 Vs 值是 UNTELAXED 的值，即无限频率的值，除非上面的 READ_</span>VELOCITIES<span class="emphasis">_AT_</span>f0 参数设置为 true，在这种情况下它们是频率的值 f0 --&gt;</span><br><span class="line">&lt;!-- Please also note that Qmu is always equal to Qs, but QKappa is in general not equal to Qp. To convert one to the other see doc/Qkappa<span class="emphasis">_Qmu_</span>versus<span class="emphasis">_Qp_</span>Qs<span class="emphasis">_relationship_</span>in<span class="emphasis">_2D_</span>plane<span class="emphasis">_strain.pdf and utils/attenuation/conversion_</span>from<span class="emphasis">_Qkappa_</span>Qmu<span class="emphasis">_to_</span>Qp<span class="emphasis">_Qs_</span>from<span class="emphasis">_Dahlen_</span>Tromp<span class="emphasis">_959_</span>960.f90. --&gt; </span><br><span class="line">&lt;!-- 还请注意，Qmu 总是等于 Qs，但 QKappa 通常不等于 Qp。 要将一个转换为另一个，请参阅 doc/Qkappa<span class="emphasis">_Qmu_</span>versus<span class="emphasis">_Qp_</span>Qs<span class="emphasis">_relationship_</span>in<span class="emphasis">_2D_</span>plane<span class="emphasis">_strain.pdf 和 utils/attenuation/conversion_</span>from<span class="emphasis">_Qkappa_</span>Qmu<span class="emphasis">_to_</span>Qp<span class="emphasis">_Qs_</span>from<span class="emphasis">_Dahlen_</span>Tromp<span class="emphasis">_959_</span>960.f90。 --&gt;</span><br><span class="line">&lt;!-- acoustic:	model<span class="emphasis">_number			1	rho	Vp	0	0	0	QKappa	9999	0	0	0	0	0	0	(for QKappa use 9999 to ignore it) --&gt; </span></span><br><span class="line"><span class="emphasis">&lt;!-- elastic:	model_</span>number			1	rho	Vp	Vs	0	0	QKappa	Qmu		0	0	0	0	0	0	(for QKappa and Qmu use 9999 to ignore them) --&gt; </span><br><span class="line"></span><br><span class="line">&lt;!-- anisotropic: model<span class="emphasis">_number			2	rho	c11	c13 c15 c33 c35		c55		c12 c23 c25 0	0	0 --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- anisotropic in AXISYM: model_</span>number2	rho c11 c13 c15 c33 c35		c55		c12 c23 c25 c22 0	0 --&gt;</span><br><span class="line">&lt;!-- poroelastic: model<span class="emphasis">_number			3	rhos rhof phi c kxx kxz		kzz		Ks	Kf	Kfr etaf mufr Qmu --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- tomo:        model_</span>number			-1  0	0	A	0	0	0		0		0	0	0	0	0	0 --&gt;</span><br><span class="line">1 1 2700.d0 3000.d0 1732.051d0 0 0 9999 9999 0 0 0 0 0 0</span><br><span class="line">2 1 2500.d0 2700.d0 0 0 0 9999 9999 0 0 0 0 0 0</span><br><span class="line">3 1 2200.d0 2500.d0 1443.375d0 0 0 9999 9999 0 0 0 0 0 0</span><br><span class="line">4 1 2200.d0 2200.d0 1343.375d0 0 0 9999 9999 0 0 0 0 0 0</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="external-tomography-file"><a href="#external-tomography-file" class="headerlink" title="external tomography file"></a>external tomography file</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TOMEGRAPHY<span class="emphasis">_FILE							=	./DATA/tomo_</span>file.xyz</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="use-an-external-mesh-created-by-an-external-meshing-tool-or-use-the-internal-mesher"><a href="#use-an-external-mesh-created-by-an-external-meshing-tool-or-use-the-internal-mesher" class="headerlink" title="use an external mesh created by an external meshing tool or use the internal mesher"></a>use an external mesh created by an external meshing tool or use the internal mesher</h5><!-- 使用由外部网格划分工具创建的外部网格或使用内部网格生成器 -->
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read<span class="emphasis">_external_</span>mesh						=	.false.</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="PARAMETERS-FOR-EXTERNAL-MESHING-外部网格参数"><a href="#PARAMETERS-FOR-EXTERNAL-MESHING-外部网格参数" class="headerlink" title="PARAMETERS FOR EXTERNAL MESHING (外部网格参数)"></a>PARAMETERS FOR EXTERNAL MESHING (外部网格参数)</h3><h5 id="data-concerning-mesh-when-generated-using-third-party-app"><a href="#data-concerning-mesh-when-generated-using-third-party-app" class="headerlink" title="data concerning mesh, when generated using third-party app"></a>data concerning mesh, when generated using third-party app</h5><!-- 有关网格的数据，当使用第三方应用程序生成时 --> 
+<!-- see also absorbing_conditions above --> 
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">mesh<span class="emphasis">_file								=	./DATA/mesh_</span>file</span><br><span class="line">&lt;!-- file containing the mesh --&gt; </span><br><span class="line">nodes<span class="emphasis">_coords_</span>file						=	./DATA/nodes<span class="emphasis">_coords_</span>file</span><br><span class="line">&lt;!-- file containing the nodes coordinates --&gt; </span><br><span class="line">materials<span class="emphasis">_file							=	./DATA/materials_</span>file</span><br><span class="line">&lt;!-- file containing the material number for each element --&gt; </span><br><span class="line">free<span class="emphasis">_surface_</span>file						=	./DATA/free<span class="emphasis">_surface_</span>file</span><br><span class="line">&lt;!-- file containing the free surface --&gt; </span><br><span class="line">axial<span class="emphasis">_elements_</span>file						=	./DATAaxial<span class="emphasis">_elements_</span>file</span><br><span class="line">&lt;!-- file containing the axial elements if AXISYM is true --&gt; </span><br><span class="line">absorbing<span class="emphasis">_surface_</span>file					=	./DATAabsorbing<span class="emphasis">_surface_</span>file</span><br><span class="line">&lt;!-- file containing the absorbing surface --&gt; </span><br><span class="line">acoustic<span class="emphasis">_forcing_</span>surface<span class="emphasis">_file			=	./DATA/MSH/Surf_</span>acforcing<span class="emphasis">_Botom_</span>enforcing<span class="emphasis">_mesh</span></span><br><span class="line"><span class="emphasis">&lt;!-- file containing the acoustic forcing surface --&gt; </span></span><br><span class="line"><span class="emphasis">absorbing_</span>cpml<span class="emphasis">_file						=	./DATA/absorbjing_</span>cpml<span class="emphasis">_file</span></span><br><span class="line"><span class="emphasis">&lt;!-- file containing the CPML element numbers --&gt; </span></span><br><span class="line"><span class="emphasis">tangential_</span>detection<span class="emphasis">_curve_</span>file			=	./DATA/courbe<span class="emphasis">_eros-nodes</span></span><br><span class="line"><span class="emphasis">&lt;!-- file containing the curve delimiting the velocity model --&gt; </span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="PARAMETERS-FOR-INTERNAL-MESHING-内部网格参数"><a href="#PARAMETERS-FOR-INTERNAL-MESHING-内部网格参数" class="headerlink" title="PARAMETERS FOR INTERNAL MESHING (内部网格参数)"></a>PARAMETERS FOR INTERNAL MESHING (内部网格参数)</h3><h5 id="file-containing-interfaces-for-internal-mesh"><a href="#file-containing-interfaces-for-internal-mesh" class="headerlink" title="file containing interfaces for internal mesh"></a>file containing interfaces for internal mesh</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">interfacesfile							=	./DATA/interfaces<span class="emphasis">_simple_</span>topo<span class="emphasis">_curved.dat</span></span><br></pre></td></tr></tbody></table></figure>
+<h5 id="geometry-of-the-model-origin-lower-left-corner-0-0-and-mesh-description"><a href="#geometry-of-the-model-origin-lower-left-corner-0-0-and-mesh-description" class="headerlink" title="geometry of the model (origin lower_left corner = 0,0) and mesh description"></a>geometry of the model (origin lower_left corner = 0,0) and mesh description</h5><!-- 模型的几何形状（原点左下角 = 0,0）和网格描述 --> 
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xmin		=	0.d0</span><br><span class="line">&lt;!-- abscissa of left side of the model (模型左侧横坐标) --&gt; </span><br><span class="line">xmax		=	4000.d0</span><br><span class="line">&lt;!-- abscissa of right side of the model (模型右侧横坐标) --&gt; </span><br><span class="line">nx			=	80</span><br><span class="line">&lt;!-- number of elements along X --&gt; </span><br></pre></td></tr></tbody></table></figure>
+<h5 id="absorbing-boundary-parameters-see-absorbing-conditions-above"><a href="#absorbing-boundary-parameters-see-absorbing-conditions-above" class="headerlink" title="absorbing boundary parameters (see absorbing_conditions above)"></a>absorbing boundary parameters (see absorbing_conditions above)</h5><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">absorbbottom		=	.true.</span><br><span class="line">absorbright			=	.true.</span><br><span class="line">absorbtop			=	.false.</span><br><span class="line">absorbleft			=	.true.</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="define-the-defferent-regions-of-the-model-in-the-nx-nz-spectral-element-mesh"><a href="#define-the-defferent-regions-of-the-model-in-the-nx-nz-spectral-element-mesh" class="headerlink" title="define the defferent regions of the model in the (nx, nz) spectral-element mesh"></a>define the defferent regions of the model in the (nx, nz) spectral-element mesh</h5><!-- 在（nx，nz）谱元网格中定义模型的不同区域 --> 
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nbregions			=	5</span><br><span class="line">&lt;!-- then set below the different regions and model number for each region --&gt; </span><br><span class="line">&lt;!-- 然后在下面设置不同地区和每个地区的型号--&gt;</span><br><span class="line">&lt;!-- format of each line :	nxmin	nxmax	nzmin	nzmax	material<span class="emphasis">_number --&gt; </span></span><br><span class="line"><span class="emphasis">							1		80		1		20		1</span></span><br><span class="line"><span class="emphasis">							1		59		21		40		2</span></span><br><span class="line"><span class="emphasis">							71		80		21		40		2</span></span><br><span class="line"><span class="emphasis">							1		80		41		60		3</span></span><br><span class="line"><span class="emphasis">							60		70		21		40		4</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="display-parameters"><a href="#display-parameters" class="headerlink" title="display parameters"></a>display parameters</h3><h5 id=""><a href="#" class="headerlink" title=""></a></h5>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">ZY</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://erbiaoger.github.io/2022/11/28/2022-11-28-specfem2d/">http://erbiaoger.github.io/2022/11/28/2022-11-28-specfem2d/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">ZY</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/specfem/">
+                                    <span class="chip bg-color">specfem</span>
+                                </a>
+                            
+                                <a href="/tags/forward/">
+                                    <span class="chip bg-color">forward</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'gitalk',
+        owner: 'erbiaoger',
+        admin: null,
+        id: '2022-11-28T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/03/01/2023-03-01-specfem3d-global-shi-yong-ji-qiao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Specfem3d_global 使用技巧">
+                        
+                        <span class="card-title">Specfem3d_global 使用技巧</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZY
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/specfem/">
+                        <span class="chip bg-color">specfem</span>
+                    </a>
+                    
+                    <a href="/tags/forward/">
+                        <span class="chip bg-color">forward</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/11/25/2022-11-25-specfem3d-globe/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="specfem3d_globe">
+                        
+                        <span class="card-title">specfem3d_globe</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZY
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/specfem/">
+                        <span class="chip bg-color">specfem</span>
+                    </a>
+                    
+                    <a href="/tags/forward/">
+                        <span class="chip bg-color">forward</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2024</span>
+            
+            <a href="/about" target="_blank">Zhiyu Zhang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/erbiaoger" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:erbiaoger@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=643747954" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 643747954" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

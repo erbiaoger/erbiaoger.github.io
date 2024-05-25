@@ -1,0 +1,1303 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="hvsr, erbiaoger">
+    <meta name="description" content="参考：passive-seismic-hvsr
+微动H/V谱比方法 秦彤威，王少曈，冯宣政，鲁来玉* 中国地震局地球物理研究所，北京 100081
+zotero://note/u/CTAJNPFS/
+a
+被动地震 (HVSR)基本概念虽然在">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>hvsr | erbiaoger</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="erbiaoger" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">erbiaoger</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-index" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle-o" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/music">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Music</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">erbiaoger</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-index"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle-o"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/music " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Music</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hvsr</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/seismic/">
+                                <span class="chip bg-color">seismic</span>
+                            </a>
+                        
+                            <a href="/tags/hvsr/">
+                                <span class="chip bg-color">hvsr</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-05-22
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>参考：<a target="_blank" rel="noopener" href="https://www.epa.gov/environmental-geophysics/passive-seismic-hvsr">passive-seismic-hvsr</a></p>
+<p><a href="zotero://note/u/CTAJNPFS/](zotero://note/u/CTAJNPFS/)">微动H/V谱比方法 秦彤威，王少曈，冯宣政，鲁来玉* 中国地震局地球物理研究所，北京 100081</a></p>
+<p><a href="zotero://note/u/CTAJNPFS/">zotero://note/u/CTAJNPFS/</a></p>
+<p><a href="zotero://pdf">a</a></p>
+<h1 id="被动地震-HVSR"><a href="#被动地震-HVSR" class="headerlink" title="被动地震 (HVSR)"></a>被动地震 (HVSR)</h1><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a><strong>基本概念</strong></h4><p>虽然在其他地震方法中被认为是多余的和“令人讨厌的”，但地震噪声是一种声能来源，可用于估计有价值的地下信息。地震噪声由大气和人为干扰引起的自然振动组成，由于它无处不在，是一种非常方便的信号源。水平垂直频谱比 (HVSR) 被动地震方法利用地震噪声信号来估计未固结的覆盖层沉积物的特性。</p>
+<p>通过随时间测量地震噪声的三个分量，HVSR 方法可以确定点位置处覆盖层的基本共振频率 ( <em>f 0 )。</em>该频率与相应松散材料的层厚 ( <em>h</em> )（即基岩深度）和平均剪切波地震速度 ( <em>Vs ) 有关。</em>因此，HVSR 方法可用于估计急剧覆盖基岩的沉积物的厚度或剪切波速度。</p>
+<h4 id="理论"><a href="#理论" class="headerlink" title="理论"></a><strong>理论</strong></h4><p>HVSR 方法是一种被动地震方法，因此消除了对主动（即受控和人工诱发的）地震源信号的需要。相反，HVSR 方法考虑地震噪声（由人类活动、大气事件和海浪引起的环境声能）如何与地下物质相互作用。这些被归类为微震和微动的低频波穿透地下，可以穿过整个松散层到达基岩。</p>
+<p>材料以基本共振频率自然振动，并在接触时放大具有相同频率的入射波。这种现象（即共振）可以由遇到上覆岩层-基岩界面的地震噪声激发，在该处声阻抗通常会发生变化。声阻抗是声能阻力的量度并且取决于地震速度和密度。基岩-沉积物界面必须存在足够（即 2:1）的对比度，才能通过 HVSR 方法识别（Bard 等人，2004 年）。</p>
+<p>HVSR 方法使用单个宽带三分量地震仪测量三个正交方向（即两个水平方向和一个垂直方向）的地震噪声。原始地震道数据显示了每个方向在时域（即随时间变化）的噪声振幅。地震噪声振幅是随时间变化的，记录的轨迹通常在被转换到频域之前被过滤以去除高频脉冲和人为噪声（Koller 等人，2004 年）。 </p>
+<p>两个水平分量被平均合并成一个频谱，用于计算水平与垂直 (H/V) 频谱的比率。尽管存在时变因素，该 H/V 频谱比仍保持一致，因此可以可靠地用于估计基本谐振频率 ( <em>f 0</em> )。通常，<em>f 0</em>是最低值，由 H/V 频谱上的最高振幅峰值证明（Arwananda 等人，2017 年）。</p>
+<p>基本共振频率 ( <em>f 0</em> <em>) 与层厚度 ( h</em> ) 和平均剪切波速度 ( <em>Vs</em> )有关，因此  <strong>$f 0 = Vs / 4h$</strong> 。因此，如果任一参数是直接测量的（例如，钻孔测井、地震速度测量）或使用本地信息估计，则<em>f 0</em>可用于直接估计未知变量。此外，<em>f 0</em>可用于使用局部幂律回归方程估计层厚度，该方程是根据在具有广泛已知厚度的地点测量的<em>f 0值开发的（Johnson 和 Lane，2016）。</em> </p>
+<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a><strong>应用</strong></h4><p>HVSR 地震仪设计为占地面积小的手持式装置，因此，增加了地下调查的潜力和便利性。HVSR 方法提供了收集以前需要昂贵和/或耗时的现场工作（例如，钻井、大规模、侵入性调查）的数据的能力。此外，这种方法将地球物理学的应用扩展到城市化地区，这通常被证明具有挑战性，或者使用更传统的方法是不可能的 (Benjumea, 2011)。</p>
+<p>然而，城市环境中的人为噪声和修改后的景观（例如，人行道）仍然具有挑战性，因为地面耦合是三个重要的数据收集参数之一。</p>
+<p>涉及 HVSR 数据收集的另外两个因素是单元的水平和方向。尽管很重要，但不正确的水平或方向不会像耦合不足那样导致数据无法使用。然而，在大规模研究中，共同的仪器方向对于一致性变得更加关键，特别是如果该地点具有各向异性的地下属性。</p>
+<p>请注意，上述基本共振频率、平均剪切波地震速度和层厚度之间的关系仅在简单的两层系统中有效。水平到垂直的频谱可能会出现多个峰值，这种情况可能表明存在多层系统，需要进行更高级的分析（Bard 等人，2004 年）。此外，对地下地震速度结构所做的假设也可能导致复杂化。</p>
+<p>HVSR 方法假定整个研究区域具有统计上相似的地震速度特性。根据用于将基本共振频率与层厚度相关联的方程式，平均剪切波速度 ( <em>Vs</em> ) 被假定为恒定或随深度均匀变化。由于地球材料缺乏完全的同质性，在<em>Vs</em>随深度/位置不规则变化以及地层接触呈渐变或不规则的情况下会产生误差 (Delgado, 2000)。</p>
+<p>本地和区域扩展研究依赖于 HVSR 数据来绘制基岩上的松散沉积物（例如，Ibs Von Seht 等，1999 年；Parolai 等，2002 年；Lane 等，2008 年）。此外，HVSR 方法可以很容易地集成到各种类型的地球物理调查中，以抽查覆盖层厚度并约束模型和/或解释。作为主要或补充技术，HVSR 方法在以下应用中非常有用：</p>
+<ul>
+<li>基岩表面/沉积物厚度/勘测测绘</li>
+<li>冰川/冰原测绘</li>
+<li>剪切波速度结构测定</li>
+<li>微分区/地震响应分析</li>
+<li>岩土工程/地震工程项目</li>
+<li>路堤完整性测定</li>
+<li>动态基础设施表征</li>
+</ul>
+<h4 id="示例-案例研究"><a href="#示例-案例研究" class="headerlink" title="示例/案例研究"></a><strong>示例/案例研究</strong></h4><p>Benjumea, B.、Macau, A.、Gabàs, A.、Bellmunt, F.、Figueras, S. 和 Cirés J.，2011 年，用于底土表征的综合地球物理剖面和 H/V 微动测量：近地表地球物理学，v 9、没有。5，页。413-425，内政部：10.3997/1873-0604.2011021。</p>
+<p><em>抽象的</em>：测绘覆盖层下的基岩结构对于了解地质和水文地质过程至关重要。获取这些信息通常是通过钻井或地球物理调查来完成的；但这些研究很昂贵，需要大量的采集和处理时间。此外，在可用于仪器部署的区域有限的城市地区，地球物理数据采集在后勤方面可能具有挑战性。在有利的条件下（一维结构和高声阻抗对比），H/V 微动技术可以提供基岩深度的估计。该技术用于在地震微分区研究中获得土壤共振频率。它基于计算在单个站点获取的微震记录的水平与垂直光谱比。土壤共振频率与土壤剪切波速度和厚度有关。在这里，我们研究了将微动和传统勘探地球物理技术（电阻率和地震层析成像）相结合的能力，以获得与土壤共振频率和覆盖层厚度相关的经验关系。随后，我们建议将微动测量扩展到地球物理调查尚未覆盖的邻近区域。该方法已应用于位于花岗岩环境中的试验场，冲积/崩积沉积物覆盖花岗岩风化剖面。该地区的特点是城市发展和地势崎岖的部门。先验地，该区域具有应用 H/V 微动技术的合适条件。覆盖层厚度估计在 20-50 m 之间。</p>
+<p>Mahajan, AK、Mundepi, AK、Chauhan, N.、Jasrotia, AS、Rai, N. 和 Gachhayat, TK，2012 年，用于评估印度喜马拉雅西北部查谟市场地效应的主动地震和被动微震 HVSR——案例研究：应用地球物理学杂志，v. 77，p. 51-62，内政部：10.1016/j.jappgeo.2011.11.005。</p>
+<p><em>抽象的</em>：一维剪切波速度结构对于场地效应研究和岩土工程很重要，但是从传统的地球物理技术中推导它是相当困难和昂贵的。在喜马拉雅山前部的 30 个地点进行了主动（MASW）和被动（微动，HVSR）方法，该地区的特点是软沉积物和强烈的地震作用。从喜马拉雅西北查谟市下中新世床岩（上西瓦利克砾岩）上覆的 30 米厚的第四纪沉积层中获得了 ~ 238 m/s 至 ~ 450 m/s 范围内的剪切波速度 (Vs)。剪切波速度 (Vs) 连同 Chamoli 地震 (mb 6.8) 的地震输入运动已被用于获得场地响应谱。响应谱表明单层或两层建筑物的峰值地面加速度增加了五到七倍，输入地面运动的放大率增加了八到十二倍。放大频谱在中部显示峰值放大<del>2 Hz~~ 3 Hz，在城市北部、西南部和东南部显示</del> 1.75 Hz~2 Hz。微动 HVSR 的优点是它可以直接估计基频，发现对于相同的站点，基频在 ~ 1 Hz 到 ~ 3 Hz 之间变化。此外，将从 ModelHVSR Matlab 程序中获得的一维速度模型与通过使用 MASW 推导准备的土壤模型进行了比较。</p>
+<p>Panou, AA、Theodulidis, N.、Hatzidimitriou, P.、Stylianidis, K. 和 Papazachos, CB，2005 年，场地效应估计中的环境噪声水平垂直频谱比以及与城市环境中地震破坏分布的相关性：the塞萨洛尼基市（希腊北部）的案例：土壤动力学和地震工程，第 25 卷，第 第 4 页 261-274，doi：10.1016/j.soildyn.2005.02.004。</p>
+<p><em>抽象的：</em>在受 20/6/1978 (M=6.5) 破坏性地震强烈影响的塞萨洛尼基市（希腊北部）市中心区，调查了根据环境噪声测量估计地震现场响应特征的有效性。为此，在覆盖城市中心的密集点网格中进行了 250 个“单一站点”环境噪声测量。计算了每个站点的环境噪声 H/V 频谱比，并估计了基频 (fo) 和相应的 H/V 振幅水平 (Ao)。将 fo 和 Ao 的等值线图与地质和岩土工程研究的结果以及 1978 年地震的宏观地震数据进行了比较，发现它们具有很好的相关性。</p>
+<p>Picotti, S.、Francese, R.、Giorgi, M. 和 Pettenati, F.，2017 年，使用被动地震数据的水平垂直分量光谱比 (HVSR) 技术估算冰川厚度和基础特性：期刊冰川学，v. 63，没有。238，页。229-248，内政部：10.1017/慢跑.2016.135。</p>
+<p><em>抽象的</em>: 微动测量和水平垂直光谱比 (HVSR) 技术通常用于场地效应研究以及确定软沉积层的厚度，可有效地用于绘制冰川厚度图。在这项工作中，广泛用于地球内部成像的无线电回波探测、地电和主动地震方法被用于验证高山和南极冰川环境中 HVSR 技术的可靠性。该技术已被用于分析来自 Adamello 和 Ortles-Cevedale 地块（意大利）、伯尔尼高地阿尔卑斯山（瑞士）和 Whillans 冰流（南极洲西部）冰川的被动地震数据。与不同地球物理成像方法获得的结果相比，我们表明，HVSR 光谱中的共振频率与现场的冰厚度密切相关，范围从几十米到超过 800 米。该方法的可靠性主要取决于冰川表面传感器的耦合和基础阻抗对比。这种被动地震技术提供了一种逻辑上高效且具有成本效益的方法来绘制冰川和冰盖厚度图。此外，在某些条件下，它允许对基础地震特性进行可靠的估计。这种被动地震技术提供了一种逻辑上高效且具有成本效益的方法来绘制冰川和冰盖厚度图。此外，在某些条件下，它允许对基础地震特性进行可靠的估计。这种被动地震技术提供了一种逻辑上高效且具有成本效益的方法来绘制冰川和冰盖厚度图。此外，在某些条件下，它允许对基础地震特性进行可靠的估计。</p>
+<p>Picozzi, M.、Parolai, S. 和 Richwalksi, SM，2005 年，地震噪声的 H/V 比和频散曲线的联合反演：估计基岩的 S 波速度：地球物理研究快报，第 32 卷，第 1 期。11, 4 页，doi:10.1029/2005GL022878。</p>
+<p><em>摘要</em>: 通过地震噪声记录获得的相速度和 H/V 比曲线的联合反演，可以反演局部沉积盖层的剪切波速度结构。我们的反演方案使用遗传算法并考虑了高阶模式对数据集的影响。受先前发表的关于联合反演的结果 (Parolai et al., 2005) 的鼓舞，我们更进一步。我们发现，使用合成数据集，沉积物-基岩界面处的阻抗对比对 H/V 比曲线的形状有很大影响，因此可以很好地限制节理中的基岩 S 波速度- 反转过程。使用真实数据集进一步证实了我们的观察结果。</p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a><strong>参考</strong></h4><p>Arwananda, AP、Aryaseta, B.、Dezulfakar, H.、Fatahillah, Y. 和 Rochman, J.，2017 年，Horizontal vertical Spectral Ratio Method in Microtremor to Estimate Engineering Bedrock Thickness at Sedati Mud Volcano, in Proceedings, IOP <em>Conference</em> Series : Earth and Environmental Science 62, September 2016: Bali, Indonesia, Institute of Physics, 7 p., doi:10.1088/1755-1315/62/1/012010.</p>
+<p>Bard P.-Y.、Acerra, C.、Alguacil, G.、Anastasiadis, A.、Atakan, K.、Azzara, R.、Basili, R.、Bertrand, E.、Bettig, B.、Blarel, F ., Bonnefoy-Claudet, S., Bordoni, P., Borges, A., Bøttger-Sørensen, M., Bourjot, L., Cara, F., Caserta, A., Chatelain, J.-L., Cornou , C., Cotton, F., Cultrera, G., Daminelli, R., Dimitriu, P., Dunand, F., Duval, A.-M., Fäh, D., Fojtikova, L., de Franco, R., di Giulio, G., Grandison, M., Guéguen, P., Guillier, B., Haghshenas, E., Havskov, J., Jongmans, D., Kind, F., Kirsch, J., Koehler , A., Koller, M., Kristek, J., Kristekova, M., Lacave, C., La Rocca, M., Marcellini, A., Maresca, R., Margaris, B., Moczo, P., Moreno, B., Morrone, A., Ohrnberger, M., Ojeda, JA, Oprsal, I., Pagani, M., Panou, A., Paz, C., Querendez, E., Rao, S., Rey , J., Richter, G., Rippberger, J., Roquette, P., Roten, D., Rovelli, A., Saccoroti, G.,Savvaidis, A., Scherbaum, F., Schisselé, E., Spühler-Lanz, E., Tento, A., Teves-Costa, P., Theodulidis, N., Tvedt, E., Utheim, T., Vassiliadès , J.-F., Vidal, S., Viegas, G., Vollmer, D., Wathelet, M., Woessner, J., Wolff, K., Zacharapoulos, S., 2004，实施指南环境振动的 H/V 频谱比技术——测量、处理和解释：SESAME 欧洲研究项目 WP12——可交付 D23.12，62 页，可在：SESAME 欧洲研究项目 WP12—Deliverable D23.12，62 页，网址：SESAME 欧洲研究项目 WP12—Deliverable D23.12，62 页，网址：<a href="ftp://ftp.geo.uib.no/pub/seismo/SOFTWARE/SESAME/USER-GUIDELINES/SESAME-HV-User-Guidelines.pdf">ftp://ftp.geo.uib.no/pub/seismo/SOFTWARE/SESAME/USER-GUIDELINES/SESAME-HV-User-Guidelines.pdf</a>。</p>
+<p>Benjumea, B.、Macau, A.、Gabàs, A.、Bellmunt, F.、Figueras, S. 和 Cirés, J.，2011 年，用于底土表征的综合地球物理剖面和 H/V 微动测量：近地表地球物理学，第 9 节，没有。5，页。413-425，内政部：10.3997/1873-0604.2011021。</p>
+<p>Delgado, J.、López-Casado, C.、Giner, J.、Estévez, A.、Cuenca, A. 和 Molina, S.，2000，作为地球物理勘探工具的微动：应用和局限性：纯粹和应用地球物理学, v. 157, 没有。第 9 页 1445-1462，内政部：10.1007/PL00001128。</p>
+<p>Ibs-von Seht, M. 和 Wohlenberg, J.，1999 年，用于绘制软土沉积物厚度图的微震测量：美国地震学会公报，第 89 卷，第 13 页。250-259。</p>
+<p>Johnson, CD, and Lane, JW, 2016, Statistical comparison of methods for estimating sediment thickness from Horizontal-to-Vertical Spectral Ratio (HVSR) seismic methods: An example from Tylerville, Connecticut, USA, in Proceedings,<em>应用</em>研讨会地球物理学到工程和环境问题：勘探地球物理学会，p. 317-323，doi:10.4133/SAGEEP.29-057。</p>
+<p>Lane, JW, White, EA, Steele, GV, and Cannia, JC, 2008, Estimation of bedrock depth using the horizontal-to-vertical (H/V) ambient-noise seismic method, in Proceedings, 地球物理学<em>应用</em>研讨会工程和环境问题：勘探地球物理学会，p。490-502，内政部：10.4133/1.2963289。</p>
+<p>Koller, MG、Chatelain, J.-L.、Guillier, B.、Duval, A.-M.、Atakan, K.、Lacave, C.、Bard, P.-Y. 和 SESAME 参与者，2004 年，用于实施 H/V 比技术的实用用户指南和软件：测量条件、处理方法和结果解释，第13届世界地震工程会议论文集：加拿大不列颠哥伦比亚省温哥华，WCEE，10 页<em>。</em></p>
+<p>Nakamura, Y., 1989, A method for subsurface using microtremors using the microtremors on the ground surface: Quarterly Report Railway Technical Research Institute, v. 30, no. 1989, 一种利用地表微震的地下动力特性估计方法：铁道技术研究所季报，第 30 卷，第 第 1 页 25-33。</p>
+<p>Panou, AA、Theodulidis, N.、Hatzidimitriou, P.、Stylianidis, K. 和 Papazachos, CB，2005 年，场地效应估计中的环境噪声水平垂直频谱比以及与城市环境中地震破坏分布的相关性：the塞萨洛尼基市（希腊北部）的案例：土壤动力学和地震工程，第 25 卷，第 第 4 页 261-274，doi：10.1016/j.soildyn.2005.02.004。</p>
+<p><em>Parolai, S.、Bormann, P. 和 Milkert, C.，2002 年， Vs</em>之间的新关系、沉积物厚度和根据科隆地区地震噪声的 H/V 比计算的共振频率（德国）：公报美国地震学会，第 92 卷，第 1 期。第 6 页 2521-2527，内政部：10.1785/0120010248。</p>
+<p>Picotti, S.、Francese, R.、Giorgi, M. 和 Pettenati, F.，2017 年，使用被动地震数据的水平垂直分量光谱比 (HVSR) 技术估算冰川厚度和基础特性：期刊冰川学，v. 63，没有。238，页。229-248，内政部：10.1017/慢跑.2016.135。</p>
+<p>Picozzi, M.、Parolai, S. 和 Richwalksi, SM，2005 年，地震噪声的 H/V 比和频散曲线的联合反演：估计基岩的 S 波速度：地球物理研究快报，第 32 卷，第 1 期。11, 4 页，doi:10.1029/2005GL022878。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">ZY</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://erbiaoger.github.io/2023/05/22/2023-05-22-hvsr/">http://erbiaoger.github.io/2023/05/22/2023-05-22-hvsr/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">ZY</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/seismic/">
+                                    <span class="chip bg-color">seismic</span>
+                                </a>
+                            
+                                <a href="/tags/hvsr/">
+                                    <span class="chip bg-color">hvsr</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'gitalk',
+        owner: 'erbiaoger',
+        admin: null,
+        id: '2023-05-22T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/05/24/2023-05-24-seisflows/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="seisflows">
+                        
+                        <span class="card-title">seisflows</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZY
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/seisflows/">
+                        <span class="chip bg-color">seisflows</span>
+                    </a>
+                    
+                    <a href="/tags/inversion/">
+                        <span class="chip bg-color">inversion</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/05/22/2023-05-22-migration/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="migration">
+                        
+                        <span class="card-title">migration</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZY
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/seismic/">
+                        <span class="chip bg-color">seismic</span>
+                    </a>
+                    
+                    <a href="/tags/migration/">
+                        <span class="chip bg-color">migration</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2024</span>
+            
+            <a href="/about" target="_blank">Zhiyu Zhang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/erbiaoger" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:erbiaoger@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=643747954" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 643747954" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,1370 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="chatGPT_prompt, erbiaoger">
+    <meta name="description" content="遵循五段式框架书写prompt
+任务设定和方向引导
+具体任务步骤
+样本示例
+注意事项
+输出要求和思维链引导
+
+1你擅长将Matlab代码转成python代码。你的任务是将下面的Matlab代码转成python。
+
+123456你是深度学习，">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>chatGPT_prompt | erbiaoger</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="erbiaoger" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">erbiaoger</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-index" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle-o" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/music">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Music</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">erbiaoger</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-index"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle-o"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/music " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Music</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">chatGPT_prompt</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/computer/">
+                                <span class="chip bg-color">computer</span>
+                            </a>
+                        
+                            <a href="/tags/GPT/">
+                                <span class="chip bg-color">GPT</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-12-10
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="遵循五段式框架书写prompt"><a href="#遵循五段式框架书写prompt" class="headerlink" title="遵循五段式框架书写prompt"></a>遵循五段式框架书写prompt</h2><ol>
+<li>任务设定和方向引导</li>
+<li>具体任务步骤</li>
+<li>样本示例</li>
+<li>注意事项</li>
+<li>输出要求和思维链引导</li>
+</ol>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你擅长将Matlab代码转成python代码。你的任务是将下面的Matlab代码转成python。</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">你是深度学习，机器学习的专家，擅长神经网络的解释和说明。你的任务是解释和说明该图片中的网络结构，包括每一步的作用。</span><br><span class="line"></span><br><span class="line">具体任务步骤是：</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 了解图片中神经网络每一层是什么</span><br><span class="line"><span class="bullet">2.</span> 解释说明神经网络每一层的作用</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你是深度学习，机器学习和论文编写的专家，你擅长自然语言处理任务，擅长文本摘要总结汇总。你的任务是将下面的文字使用流畅的语言表达成一段话，要求有连贯性。</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你擅长将python代码的解读。你的任务是将下面的python代码逐句解读并添加中文注释。</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>完整例子：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">你擅长自然语言处理任务，擅长实体识别、文本摘要，精通incontext-learning。你的任务是：对下面短横线隔开的Text文本先做命名实体识别再做文本摘要，然后对文本摘要质量打分。</span><br><span class="line"></span><br><span class="line">具体任务步骤是（如果你不知道具体步骤，你可以让chatgpt设计然后根据实际需求改）：</span><br><span class="line"></span><br><span class="line">1、完整阅读，全面掌握文本的主题、风格、和重点信息</span><br><span class="line">2、提取命名实体，如时间、地点、人物等关键信息</span><br><span class="line">3、做文本摘要，不要丢失关键信息</span><br><span class="line">4、对文本摘要质量打分</span><br><span class="line">命名实体示例：["孙悟空", "贾宝玉","太白山"]</span><br><span class="line"></span><br><span class="line">请仔细阅读注意事项，：</span><br><span class="line"></span><br><span class="line">1、参考命名实体示例，学习识别文本中其它实体</span><br><span class="line">2、不要用指示词，类似'基于这章节信息','基于背景知识','本文',等不要使用</span><br><span class="line">3、文本摘要不能丢失关键信息</span><br><span class="line">4、一个高质量的文本摘要应该确保：1) 2) 3)，给出1-10分的得分。</span><br><span class="line"></span><br><span class="line">我要求你做结构化输出，你的输出必须是json格式，有两个字段 "实体", "文本摘要"，输出示例如下：（）</span><br><span class="line"></span><br><span class="line">参考上面的任务要求、具体步骤、小样本示例、注意事项、输出要求，充分理解后，制定策略完成任务。不用输出每一步策略，只需输出最终结果。</span><br><span class="line"></span><br><span class="line">let's think step by step.</span><br><span class="line"></span><br><span class="line">Text: -----</span><br><span class="line"></span><br><span class="line">\------</span><br></pre></td></tr></tbody></table></figure>
+
+<pre><code>注：示例不完善，参考框架，根据自己实际任务编写prompt
+</code></pre>
+<ul>
+<li>1：用“” &lt;&gt;等符号显式的指出输入文本。不要用较短的模糊的prompt试图阐明意图，用较长的更具体的prompt，可以得到更相关和更详细的输出。</li>
+<li>2：要求结构化输出，如json格式，这样可以更好的用python读存</li>
+<li>3：要求模型检验前提假设是否满足。</li>
+<li>4：few-shot prompt，给模型一些示例。</li>
+<li>5：明确任务所需步骤，并显式的要求模型按步进行</li>
+<li>6：迭代prompt，1）分析为什么结果不满意。2）按照前面5条重新阐明。3）用小批数据实验prompt。</li>
+</ul>
+<p>1、你是[某个领域]的专家，概述一种逐步解决问题的方法来有效应对[插入你的问题]</p>
+<p>2、我想学习[插入主题]，你需要告诉我最重要的20%知识，我只需学习这些重要知识，能够让我对该领域的80%有充分和扎实的理解。</p>
+<p>3、我希望学习或提高[插入所需技能]。作为一个[初学者/进阶学习者]，你需要给我定制30天学习计划来启动我的学习，以掌握这项技能。</p>
+<p>4、我正在学习[插入主题]。现需要你对我做测试，找出我知识上的不足，并做解释加强我的知识理解，开始对我学习的主题进行提问。</p>
+<p>5、想象一下你是[插入著名人物]。对我下面双引号“”中的论点提出你的评论，然后从[人物]的角度提出你的论点。</p>
+<p>6、你是[某个领域]的专家，请对下面这段文章做同行评议。纠正语法、字词使用、逻辑错误，并提出改善文章的建议。</p>
+<p>所谓 few-shot prompt就是用一些样本示例提示模型学习。</p>
+<p>举例如：”你擅长利用大模型做意图识别，你需要帮我完成句子情感意图识别。在下面大括号中我给你一些小样本示例：{“我今天心情很差”——“负面情绪”，“天气太好了吧！”——“正面情绪”，“你是个好人，我配不上你”——“负面情绪”}。你要利用自己丰富的预训练知识和思维链，认真仔细思考，并结合小样本示例，完成下面这句话的情感意图识别：[插入句子]”</p>
+<p>再举例如：”你擅长利用大模型学习，尤其精通零样本、小样本学习。你的任务是按照示例的回答风格回答问题。示例如下：{query: “教我什么是耐心”，answer：“那条雕刻出最深沉峡谷的河流，源自一处恬静的泉眼；最宏伟的交响乐，始于一音之启；最复杂繁华的挂毯，始自一丝细线。”}，你要认真学习上面小样本示例的回答风格，利用你丰富的预训练知识，回答下面的问题：[插入问题]”</p>
+<h2 id="1-术语翻译"><a href="#1-术语翻译" class="headerlink" title="1 术语翻译"></a>1 术语翻译</h2><p>作用：在英文翻译中，让术语更加地道和准确。</p>
+<p>**prompt 命令 ：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在xxx领域，xx的术语翻译是什么？</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-论文润色"><a href="#2-论文润色" class="headerlink" title="2 论文润色"></a>2 论文润色</h2><h3 id="2-1-SCI润色"><a href="#2-1-SCI润色" class="headerlink" title="2.1 SCI润色"></a>2.1 SCI润色</h3><p><strong>作用</strong>：ChatGPT可以成为sci论文的润色工具，从语法、用词、结构、语气等各方面进行修改<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618795297#ref_1">1</a>。</p>
+<p><strong>prompt命令（语言翻译）</strong>：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">As a professional academic English editor , you are asked to translate the following paragraph into English</span><br></pre></td></tr></tbody></table></figure>
+
+<p>建议可以使用deepl和谷歌翻译进行翻译</p>
+<p><img src="https://pic1.zhimg.com/v2-bbf6b38ee55b050d8417eb1d7926fa70_r.jpg" alt="img"></p>
+<p><strong>prompt 命令（语法修改)</strong> ：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">As a professional academic English editor, you are asked to revise the grammar of the following passage <span class="keyword">and</span> <span class="built_in">list</span> the changes made to each section</span><br></pre></td></tr></tbody></table></figure>
+
+
+<p><img src="https://pic4.zhimg.com/v2-dcd5c32c663dc599d19322ba7fe85b87_r.jpg" alt="img"></p>
+<p>注意：语法的使用必须还要仔细确认，最后也可以使用grammarly再确认一遍。</p>
+<p><strong>prompt 命令（语言润色）</strong> ：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">As a professional academic English editor, you are asked to revise the following passage using academic language <span class="keyword">and</span> logic, <span class="keyword">and</span> <span class="built_in">list</span> the changes made to each section</span><br></pre></td></tr></tbody></table></figure>
+
+<p>也可以使用<strong>quillbot</strong>进行润色</p>
+<p><img src="https://pic4.zhimg.com/v2-6cef36e9ae8d699e4e8efc92d19e226b_r.jpg" alt="img"></p>
+<p>除此之外，我们甚至可以让chatgpt从固定期刊的角度进行润色，需要自己挖掘prompt语句。如：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Yo<span class="string">u're a top university professor and a reviewer from AIC journal. l will provide you with my written text. You need to do the tasksbelow:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1.List proofread suggestions for improvement.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2. Write me a polished version according to the writing and wording styles of abovejournals.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Do you understand?</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p><img src="https://pic2.zhimg.com/v2-94fa41277bbc7f0c6811fc41dd0cafc1_r.jpg" alt="img"></p>
+<h3 id="2-2-中文润色"><a href="#2-2-中文润色" class="headerlink" title="2.2 中文润色"></a>2.2 中文润色</h3><p><strong>作用：</strong>ChatGPT可以成为中文论文的润色工具，从语法、用词、结构、语气等各方面进行修改。</p>
+<p><strong>prompt 命令（润色完善） ：</strong>用学术逻辑和语言，列出下段话需要修改的部分</p>
+<p>下面以随便截取的一段话为例进行润色：</p>
+<p><img src="https://pic2.zhimg.com/v2-3fe8f2f1876ae1e5f27e03bd7888bb85_r.jpg" alt="img"></p>
+<p><strong>prompt 命令（修改语句） ：</strong>请你扮演一个学术编辑，下面这段话有问题吗，直接列出需要修改的每一部分</p>
+<p>下面以随便截取的一段话为例进行修改：</p>
+<p><img src="https://pic1.zhimg.com/v2-c2ae824c28a813e296a1b3b5eda88a64_r.jpg" alt="img"></p>
+<p>此外，笔者发现chagpt，喜欢将<strong>目的和问题置于显眼位置</strong>，这对于书面表达非常重要，即总分结构。例如，“为了提高安全管理的水平，xxxxxx”</p>
+<h2 id="3-研究思路辅助"><a href="#3-研究思路辅助" class="headerlink" title="3 研究思路辅助"></a>3 研究思路辅助</h2><p>在研究中可以尽可能形成假设，然后利用chatgpt强大的知识体系作证其可行性，在进行研究。此外，也可以利用chatgpt细化研究步骤。</p>
+<h3 id="3-1-思路验证"><a href="#3-1-思路验证" class="headerlink" title="3.1 思路验证"></a>3.1 思路验证</h3><p><img src="https://pic4.zhimg.com/v2-80ef382f18b69026dbe6bd7be38efe13_r.jpg" alt="img"></p>
+<p>思路作证</p>
+<h3 id="3-2-思路细化"><a href="#3-2-思路细化" class="headerlink" title="3.2 思路细化"></a>3.2 思路细化</h3><p><img src="https://pic4.zhimg.com/v2-8728e1d6fb1375fba3170316efdc497f_r.jpg" alt="img"></p>
+<p>细化研究思路</p>
+<h2 id="4-编程辅助"><a href="#4-编程辅助" class="headerlink" title="4 编程辅助"></a>4 编程辅助</h2><h3 id="4-1-数据制图辅助"><a href="#4-1-数据制图辅助" class="headerlink" title="4.1 数据制图辅助"></a>4.1 数据制图辅助</h3><p>数据制图当然可以用github ciopilot（AI编程插件）、origin（软件）来实现。</p>
+<p>也可以由chatgpt直接生成完整代码后，输入到vscode或者pycharm中进行绘制。</p>
+<p><img src="https://pic1.zhimg.com/v2-9949073a524c5352022be1ca043b7964_r.jpg" alt="img"></p>
+<p>chatgpt生成代码</p>
+<p><img src="https://pic4.zhimg.com/v2-52d1ca3672208e048a0b24574cd1632b_r.jpg" alt="img"></p>
+<p>编译器绘制</p>
+<p><img src="https://pic1.zhimg.com/v2-a5becae8ad2764a7aaaf6272ca045bbc_r.jpg" alt="img"></p>
+<p>进一步修改</p>
+<p><img src="https://pic4.zhimg.com/v2-1072fabb5a0ef629852f514f116a2b53_r.jpg" alt="img"></p>
+<p>修改绘制</p>
+<h3 id="4-2-代码辅助"><a href="#4-2-代码辅助" class="headerlink" title="4.2 代码辅助"></a>4.2 代码辅助</h3><p>chatgpt可广泛用于科研中代码辅助，本文以管科中最常用的AHP为例进行示范。</p>
+<p><img src="https://pic1.zhimg.com/v2-d8540a786c36667e5f989f1c30f291e8_r.jpg" alt="img"></p>
+<p>通过代码验证，发现consistency_ratio是不是算错了，要gpt进行改正。</p>
+<p><img src="https://pic4.zhimg.com/v2-2f0c84cb34366b85f144d04dd0414383_r.jpg" alt="img"></p>
+<p>运行结果如下：</p>
+<p><img src="https://pic1.zhimg.com/v2-f8bcf6b06b09905c4c9b85cf99a65138_r.jpg" alt="img"></p>
+<p>当然，这是最简单的代码辅助，chatgpt还可以对代码进行改进、复现。亲测可用于计算机视觉，自然语言处理、智能优化算法等。此外，语言也包括matlab、python、c等是多种语言。</p>
+<p>然而，本人更倾向于使用github ciopilot（AI编程插件），只要理清思路，写好注释来一步一步生成代码，这样代码的准确率才能够提升。</p>
+<h2 id="5-数据分析辅助"><a href="#5-数据分析辅助" class="headerlink" title="5 数据分析辅助"></a>5 数据分析辅助</h2><p>以随便一篇论文中的数据为例：</p>
+<p><img src="https://pic1.zhimg.com/v2-8bcfdc88058c050291786397123fb754_r.jpg" alt="img"></p>
+<p>论文数据</p>
+<p><img src="https://pic3.zhimg.com/v2-5027d9aa8677d43315e56eab6a025436_r.jpg" alt="img"></p>
+<p>数据分析</p>
+<p><strong>注意：数据分析</strong>具体还是要结合自己实验的具体情况进行分析，chatgpt可提供数据分析的<strong>语言逻辑参考</strong>。</p>
+<h2 id="6-其他尝试场景"><a href="#6-其他尝试场景" class="headerlink" title="6 其他尝试场景"></a>6 其他尝试场景</h2><h3 id="6-1-总结论文综述"><a href="#6-1-总结论文综述" class="headerlink" title="6.1 总结论文综述"></a>6.1 总结论文综述</h3><p>可以按照<strong>一定的句式</strong>让chatgpt<strong>仿写文献综述。</strong></p>
+<h3 id="6-2-缩写论文段落。"><a href="#6-2-缩写论文段落。" class="headerlink" title="6.2 缩写论文段落。"></a>6.2 缩写论文段落。</h3><p>直接使用命令缩写论文中某一章节的部分。当然，可以扩写，但是需要自己把握内容，这里不进行演示。</p>
+<h3 id="6-3-示意图绘制"><a href="#6-3-示意图绘制" class="headerlink" title="6.3 示意图绘制"></a>6.3 示意图绘制</h3><p>可以结合chatgpt+midjourney两种AI工具进行科研绘图。这里不进行展示。</p>
+<h3 id="6-4-专属知识数据库"><a href="#6-4-专属知识数据库" class="headerlink" title="6.4 专属知识数据库"></a>6.4 专属知识数据库</h3><p>可以搭建个人知识库，将阅读的论文、数据集等文字形式知识，并利用newbing、或者chatgptAPI搭建专属的领域专家。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">ZY</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://erbiaoger.github.io/2023/12/10/2023-12-10-chatgpt-prompt/">http://erbiaoger.github.io/2023/12/10/2023-12-10-chatgpt-prompt/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">ZY</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/computer/">
+                                    <span class="chip bg-color">computer</span>
+                                </a>
+                            
+                                <a href="/tags/GPT/">
+                                    <span class="chip bg-color">GPT</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'gitalk',
+        owner: 'erbiaoger',
+        admin: null,
+        id: '2023-12-10T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/12/19/2023-08-21-ji-da-si-ran/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="极大似然">
+                        
+                        <span class="card-title">极大似然</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-19
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZY
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/math/">
+                        <span class="chip bg-color">math</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/09/21/2023-09-21-ssh-x-user/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="ssh -X">
+                        
+                        <span class="card-title">ssh -X</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZY
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/computer/">
+                        <span class="chip bg-color">computer</span>
+                    </a>
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/ssh/">
+                        <span class="chip bg-color">ssh</span>
+                    </a>
+                    
+                    <a href="/tags/GUI/">
+                        <span class="chip bg-color">GUI</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2024</span>
+            
+            <a href="/about" target="_blank">Zhiyu Zhang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/erbiaoger" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:erbiaoger@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=643747954" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 643747954" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

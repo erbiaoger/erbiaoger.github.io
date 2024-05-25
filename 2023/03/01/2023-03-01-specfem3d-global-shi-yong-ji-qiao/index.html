@@ -1,0 +1,1249 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Specfem3d_global 使用技巧, erbiaoger">
+    <meta name="description" content="NCHUNKS如果想 NCHUNKS = 6 ，则需 ABSORBING_CONDITIONS = .false. 取消吸收
+SAVE_FORWARD如果想 SAVE_FORWARD = .true. ,则需打开 PARTIAL_PHYS_">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Specfem3d_global 使用技巧 | erbiaoger</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="erbiaoger" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">erbiaoger</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-index" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle-o" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/music">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Music</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">erbiaoger</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-index"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle-o"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/music " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Music</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Specfem3d_global 使用技巧</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/specfem/">
+                                <span class="chip bg-color">specfem</span>
+                            </a>
+                        
+                            <a href="/tags/forward/">
+                                <span class="chip bg-color">forward</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-03-01
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h4 id="NCHUNKS"><a href="#NCHUNKS" class="headerlink" title="NCHUNKS"></a>NCHUNKS</h4><p>如果想 <code>NCHUNKS = 6</code> ，则需 <code>ABSORBING_CONDITIONS = .false.</code> 取消吸收</p>
+<h4 id="SAVE-FORWARD"><a href="#SAVE-FORWARD" class="headerlink" title="SAVE_FORWARD"></a>SAVE_FORWARD</h4><p>如果想 <code>SAVE_FORWARD = .true.</code> ,则需打开 <code>PARTIAL_PHYS_DISPERSION_ONLY    = .false.</code> 和 <code>UNDO_ATTENUATION                = .false.</code>  其中任一</p>
+<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Simulation input parameters</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># forward or adjoint simulation</span></span><br><span class="line">SIMULATION_TYPE                 = 1   <span class="comment"># set to 1 for forward simulations, 2 for adjoint simulations for sources, and 3 for kernel simulations</span></span><br><span class="line">NOISE_TOMOGRAPHY                = 0   <span class="comment"># flag of noise tomography, three steps (1,2,3). If earthquake simulation, set it to 0.</span></span><br><span class="line">SAVE_FORWARD                    = .<span class="literal">false</span>.   <span class="comment"># save last frame of forward simulation or not</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># number of chunks (1,2,3 or 6)</span></span><br><span class="line">NCHUNKS                         = 6</span><br><span class="line"></span><br><span class="line"><span class="comment"># angular width of the first chunk (not used if full sphere with six chunks)</span></span><br><span class="line">ANGULAR_WIDTH_XI_IN_DEGREES     = 15.d0   <span class="comment"># angular size of a chunk</span></span><br><span class="line">ANGULAR_WIDTH_ETA_IN_DEGREES    = 15.d0</span><br><span class="line">CENTER_LATITUDE_IN_DEGREES      = 4.5d0</span><br><span class="line">CENTER_LONGITUDE_IN_DEGREES     = 136.d0</span><br><span class="line">GAMMA_ROTATION_AZIMUTH          = 0.d0</span><br><span class="line"></span><br><span class="line"><span class="comment"># number of elements at the surface along the two sides of the first chunk</span></span><br><span class="line"><span class="comment"># (must be multiple of 16 and 8 * multiple of NPROC below)</span></span><br><span class="line">NEX_XI                          = 32</span><br><span class="line">NEX_ETA                         = 32</span><br><span class="line"></span><br><span class="line"><span class="comment"># number of MPI processors along the two sides of the first chunk</span></span><br><span class="line">NPROC_XI                        = 2</span><br><span class="line">NPROC_ETA                       = 2</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Model</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1D models with real structure:</span></span><br><span class="line"><span class="comment"># 1D_isotropic_prem, 1D_transversely_isotropic_prem, 1D_iasp91, 1D_1066a, 1D_ak135f_no_mud, 1D_ref, 1D_ref_iso, 1D_jp3d,1D_sea99</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 1D models with only one fictitious averaged crustal layer:</span></span><br><span class="line"><span class="comment"># 1D_isotropic_prem_onecrust, 1D_transversely_isotropic_prem_onecrust, 1D_iasp91_onecrust, 1D_1066a_onecrust, 1D_ak135f_no_mud_onecrust</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># fully 3D models:</span></span><br><span class="line"><span class="comment"># transversely_isotropic_prem_plus_3D_crust_2.0, 3D_anisotropic, 3D_attenuation,</span></span><br><span class="line"><span class="comment"># s20rts, s40rts, s362ani, s362iso, s362wmani, s362ani_prem, s362ani_3DQ, s362iso_3DQ,</span></span><br><span class="line"><span class="comment"># s29ea, sea99_jp3d1994, sea99, jp3d1994, heterogen, full_sh, sgloberani_aniso, sgloberani_iso</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 3D crustal models:</span></span><br><span class="line"><span class="comment"># crust1.0, crust2.0, EPcrust, EuCRUST, crustmaps, crustSH</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Mars models:</span></span><br><span class="line"><span class="comment"># 1D_Sohl, 1D_Sohl_3D_crust, 1D_case65TAY, 1D_case65TAY_3D_crust, mars_1D, mars_1D_3D_crust</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Moon models:</span></span><br><span class="line"><span class="comment"># vpremoon</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 3D models with 3D crust: append "_**crustname**" to the mantle model name</span></span><br><span class="line"><span class="comment">#                          to take a 3D crustal model (by default crust2.0 is taken for 3D mantle models)</span></span><br><span class="line"><span class="comment">#                          e.g. s20rts_crust1.0, s362ani_crustmaps, full_sh_crustSH, sglobe_EPcrust, etc.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 3D models with 1D crust: append "_1Dcrust" to the 3D model name</span></span><br><span class="line"><span class="comment">#                          to take the 1D crustal model from the</span></span><br><span class="line"><span class="comment">#                          associated reference model rather than the default 3D crustal model</span></span><br><span class="line"><span class="comment">#                          e.g. s20rts_1Dcrust, s362ani_1Dcrust, etc.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#MODEL                           = 1D_Sohl_3D_crust</span></span><br><span class="line"><span class="comment">#MODEL                           = mars_1D</span></span><br><span class="line"><span class="comment">#MODEL                           = 1D_case65TAY_3d_crust</span></span><br><span class="line">MODEL                           = 1D_isotropic_prem</span><br><span class="line"><span class="comment"># parameters describing the Earth model</span></span><br><span class="line">OCEANS                          = .<span class="literal">false</span>.</span><br><span class="line">ELLIPTICITY                     = .<span class="literal">false</span>.</span><br><span class="line">TOPOGRAPHY                      = .<span class="literal">false</span>.</span><br><span class="line">GRAVITY                         = .<span class="literal">true</span>.</span><br><span class="line">ROTATION                        = .<span class="literal">true</span>.</span><br><span class="line">ATTENUATION                     = .<span class="literal">true</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># record length in minutes</span></span><br><span class="line"><span class="comment">#RECORD_LENGTH_IN_MINUTES        = 2.5d0</span></span><br><span class="line">RECORD_LENGTH_IN_MINUTES        = 10.d0</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Mesh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## regional mesh cut-off</span></span><br><span class="line"><span class="comment"># using this flag will cut-off the mesh in the mantle at a layer matching to the given cut-off depth.</span></span><br><span class="line"><span class="comment"># this flag only has an effect for regional simulations, i.e., for NCHUNKS values less than 6.</span></span><br><span class="line"><span class="comment"># regional mesh cutoff</span></span><br><span class="line">REGIONAL_MESH_CUTOFF            = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># regional mesh cut-off depth (in km)</span></span><br><span class="line"><span class="comment"># possible selections are: 24.4d0, 80.d0, 220.d0, 400.d0, 600.d0, 670.d0, 771.d0</span></span><br><span class="line"><span class="comment"># regional msh cutoff depth</span></span><br><span class="line">REGIONAL_MESH_CUTOFF_DEPTH      = 400.d0</span><br><span class="line"></span><br><span class="line"><span class="comment"># regional mesh cut-off w/ a second doubling layer below 220km interface</span></span><br><span class="line"><span class="comment"># (by default, a first doubling layer will be added below the Moho, and a second one below the 771km-depth layer.</span></span><br><span class="line"><span class="comment">#  Setting this flag to .true., will move the second one below the 220km-depth layer for regional mesh cut-offs only.)</span></span><br><span class="line"><span class="comment">#  regional mesh add 2nd doubling</span></span><br><span class="line">REGIONAL_MESH_ADD_2ND_DOUBLING  = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Absorbing boundary conditions</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># absorbing boundary conditions for a regional simulation</span></span><br><span class="line">ABSORBING_CONDITIONS            = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># run global simulation for a circular region and apply high attenuation for the rest of the model</span></span><br><span class="line"><span class="comment"># this creates an absorbing boundary with less reflection than stacey at a cost of 6x the computational cost</span></span><br><span class="line"><span class="comment"># NCHUNKS must be set to 6 to enable this flag</span></span><br><span class="line"><span class="comment"># absorb using global sponge</span></span><br><span class="line">ABSORB_USING_GLOBAL_SPONGE      = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># location and size of the region with no sponge (the region to run simulation)</span></span><br><span class="line">SPONGE_LATITUDE_IN_DEGREES      = 40.d0</span><br><span class="line">SPONGE_LONGITUDE_IN_DEGREES     = 25.d0</span><br><span class="line">SPONGE_RADIUS_IN_DEGREES        = 25.d0</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># undoing attenuation for sensitivity kernel calculations</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># to undo attenuation for sensitivity kernel calculations or forward runs with SAVE_FORWARD</span></span><br><span class="line"><span class="comment"># use one (and only one) of the two flags below. UNDO_ATTENUATION is much better (it is exact)</span></span><br><span class="line"><span class="comment"># but requires a significant amount of disk space for temporary storage.</span></span><br><span class="line"><span class="comment"># partial phys dispersion only</span></span><br><span class="line"><span class="comment"># undo attenuation</span></span><br><span class="line">PARTIAL_PHYS_DISPERSION_ONLY    = .<span class="literal">false</span>.</span><br><span class="line">UNDO_ATTENUATION                = .<span class="literal">true</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment">## undo attenuation memory</span></span><br><span class="line"><span class="comment"># How much memory (in GB) is installed on your machine per CPU core</span></span><br><span class="line"><span class="comment"># (only used for UNDO_ATTENUATION, can be ignored otherwise)</span></span><br><span class="line"><span class="comment"># Beware, this value MUST be given per core, i.e. per MPI thread, i.e. per MPI rank, NOT per node.</span></span><br><span class="line"><span class="comment"># This value is for instance:</span></span><br><span class="line"><span class="comment">#   -  4 GB on Tiger at Princeton</span></span><br><span class="line"><span class="comment">#   -  4 GB on TGCC Curie in Paris</span></span><br><span class="line"><span class="comment">#   -  4 GB on Titan at ORNL when using CPUs only (no GPUs); start your run with "aprun -n$NPROC -N8 -S4 -j1"</span></span><br><span class="line"><span class="comment">#   -  2 GB on the machine used by Christina Morency</span></span><br><span class="line"><span class="comment">#   -  2 GB on the TACC machine used by Min Chen</span></span><br><span class="line"><span class="comment">#   -  1.5 GB on the GPU cluster in Marseille</span></span><br><span class="line"><span class="comment"># When running on GPU machines, it is simpler to set PERCENT_OF_MEM_TO_USE_PER_CORE = 100.d0</span></span><br><span class="line"><span class="comment"># and then set MEMORY_INSTALLED_PER_CORE_IN_GB to the amount of memory that you estimate is free (rather than installed)</span></span><br><span class="line"><span class="comment"># on the host of the GPU card while running your GPU job.</span></span><br><span class="line"><span class="comment"># For GPU runs on Titan at ORNL, use PERCENT_OF_MEM_TO_USE_PER_CORE = 100.d0 and MEMORY_INSTALLED_PER_CORE_IN_GB = 25.d0</span></span><br><span class="line"><span class="comment"># and run your job with "aprun -n$NPROC -N1 -S1 -j1"</span></span><br><span class="line"><span class="comment"># (each host has 32 GB on Titan, each GPU has 6 GB, thus even if all the GPU arrays are duplicated on the host</span></span><br><span class="line"><span class="comment">#  this leaves 32 - 6 = 26 GB free on the host; leaving 1 GB for the Linux system, we can safely use 100% of 25 GB)</span></span><br><span class="line">MEMORY_INSTALLED_PER_CORE_IN_GB = 4.d0</span><br><span class="line"><span class="comment"># What percentage of this total do you allow us to use for arrays to undo attenuation, keeping in mind that you</span></span><br><span class="line"><span class="comment"># need to leave some memory available for the GNU/Linux system to run</span></span><br><span class="line"><span class="comment"># (a typical value is 85%; any value below is fine but the code will then save a lot of data to disk;</span></span><br><span class="line"><span class="comment">#  values above, say 90% or 92%, can be OK on some systems but can make the adjoint code run out of memory</span></span><br><span class="line"><span class="comment">#  on other systems, depending on how much memory per node the GNU/Linux system needs for itself; thus you can try</span></span><br><span class="line"><span class="comment">#  a higher value and if the adjoint crashes then try again with a lower value)</span></span><br><span class="line"><span class="comment">#  percent of mem to use per core</span></span><br><span class="line">PERCENT_OF_MEM_TO_USE_PER_CORE  = 85.d0</span><br><span class="line"></span><br><span class="line"><span class="comment">## exact mass matrices for rotation</span></span><br><span class="line"><span class="comment"># three mass matrices instead of one are needed to handle rotation very accurately;</span></span><br><span class="line"><span class="comment"># otherwise rotation is handled slightly less accurately (but still reasonably well);</span></span><br><span class="line"><span class="comment"># set to .true. if you are interested in precise effects related to rotation;</span></span><br><span class="line"><span class="comment"># set to .false. if you are solving very large inverse problems at high frequency and also undoing attenuation exactly</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># using the UNDO_ATTENUATION flag above, in which case saving as much memory as possible can be a good idea.</span></span><br><span class="line"><span class="comment"># You can also safely set it to .false. if you are not in a period range in which rotation matters,</span></span><br><span class="line"><span class="comment"># e.g. if you are targetting very short-period body waves. if in doubt, set to .true.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You can safeely set it to .true. if you have ABSORBING_CONDITIONS above, because in that case the code</span></span><br><span class="line"><span class="comment"># will use three mass matrices anyway and thus there is no additional memory cost.</span></span><br><span class="line"><span class="comment"># this flag is of course unused if ROTATION above is set to .false.</span></span><br><span class="line"><span class="comment"># exact mass matrix for rotation </span></span><br><span class="line">EXACT_MASS_MATRIX_FOR_ROTATION  = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># LDDRK time scheme</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># this for LDDRK high-order time scheme instead of Newmark</span></span><br><span class="line"><span class="comment"># use lddrk</span></span><br><span class="line">USE_LDDRK                       = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># the maximum CFL of LDDRK is significantly higher than that of the Newmark scheme,</span></span><br><span class="line"><span class="comment"># in a ratio that is theoretically 1.327 / 0.697 = 1.15 / 0.604 = 1.903 for a solid with Poisson's ratio = 0.25</span></span><br><span class="line"><span class="comment"># and for a fluid (see the manual of the 2D code, SPECFEM2D, Tables 4.1 and 4.2, and that ratio does not</span></span><br><span class="line"><span class="comment"># depend on whether we are in 2D or in 3D). However in practice a ratio of about 1.5 to 1.7 is often safer</span></span><br><span class="line"><span class="comment"># (for instance for models with a large range of Poisson's ratio values).</span></span><br><span class="line"><span class="comment"># Since the code computes the time step using the Newmark scheme, for LDDRK we will simply</span></span><br><span class="line"><span class="comment"># multiply that time step by this ratio when LDDRK is on and when flag INCREASE_CFL_FOR_LDDRK is true.</span></span><br><span class="line"><span class="comment"># increase cfl for lddrk</span></span><br><span class="line">INCREASE_CFL_FOR_LDDRK          = .<span class="literal">true</span>.</span><br><span class="line">RATIO_BY_WHICH_TO_INCREASE_IT   = 1.5d0</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Visualization</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># save AVS or OpenDX movies</span></span><br><span class="line"><span class="comment">#MOVIE_COARSE saves movie only at corners of elements (SURFACE OR VOLUME) 仅在元素的角落保存电影</span></span><br><span class="line"><span class="comment">#MOVIE_COARSE does not work with create_movie_AVS_DX</span></span><br><span class="line">MOVIE_SURFACE                   = .<span class="literal">false</span>.</span><br><span class="line">MOVIE_VOLUME                    = .<span class="literal">false</span>.</span><br><span class="line">MOVIE_COARSE                    = .<span class="literal">true</span>.</span><br><span class="line">NTSTEP_BETWEEN_FRAMES           = 50</span><br><span class="line">HDUR_MOVIE                      = 0.d0</span><br><span class="line"></span><br><span class="line"><span class="comment"># save movie in volume.  Will save element if center of element is in prescribed volume</span></span><br><span class="line"><span class="comment"># top/bottom: depth in KM, use MOVIE_TOP = -100 to make sure the surface is stored.</span></span><br><span class="line"><span class="comment"># west/east: longitude, degrees East [-180/180] top/bottom: latitute, degrees North [-90/90]</span></span><br><span class="line"><span class="comment"># start/stop: frames will be stored at MOVIE_START + i*NSTEP_BETWEEN_FRAMES, where i=(0,1,2..) and iNSTEP_BETWEEN_FRAMES &lt;= MOVIE_STOP</span></span><br><span class="line"><span class="comment"># movie_volume_type: 1=strain, 2=time integral of strain, 3=\mu*time integral of strain</span></span><br><span class="line"><span class="comment"># type 4 saves the trace and deviatoric stress in the whole volume, 5=displacement, 6=velocity</span></span><br><span class="line">MOVIE_VOLUME_TYPE               = 2</span><br><span class="line">MOVIE_TOP_KM                    = -100.0</span><br><span class="line">MOVIE_BOTTOM_KM                 = 1000.0</span><br><span class="line">MOVIE_WEST_DEG                  = -90.0</span><br><span class="line">MOVIE_EAST_DEG                  = 90.0</span><br><span class="line">MOVIE_NORTH_DEG                 = 90.0</span><br><span class="line">MOVIE_SOUTH_DEG                 = -90.0</span><br><span class="line">MOVIE_START                     = 0</span><br><span class="line">MOVIE_STOP                      = 40000</span><br><span class="line"></span><br><span class="line"><span class="comment"># save mesh files to check the mesh</span></span><br><span class="line">SAVE_MESH_FILES                 = .<span class="literal">true</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># restart files (number of runs can be 1 or higher, choose 1 for no restart files)</span></span><br><span class="line">NUMBER_OF_RUNS                  = 1</span><br><span class="line">NUMBER_OF_THIS_RUN              = 1</span><br><span class="line"></span><br><span class="line"><span class="comment"># path to store the local database files on each node</span></span><br><span class="line">LOCAL_PATH                      = ./DATABASES_MPI</span><br><span class="line"><span class="comment"># temporary wavefield/kernel/movie files</span></span><br><span class="line">LOCAL_TMP_PATH                  = ./DATABASES_MPI</span><br><span class="line"></span><br><span class="line"><span class="comment"># interval at which we output time step info and max of norm of displacement</span></span><br><span class="line">NTSTEP_BETWEEN_OUTPUT_INFO      = 500</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Sources</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># use a (tilted) FORCESOLUTION force point source (or several) instead of a CMTSOLUTION moment-tensor source.</span></span><br><span class="line"><span class="comment"># This can be useful e.g. for asteroid simulations</span></span><br><span class="line"><span class="comment"># in which the source is a vertical force, normal force, tilted force, impact etc.</span></span><br><span class="line"><span class="comment"># If this flag is turned on, the FORCESOLUTION file must be edited by giving:</span></span><br><span class="line"><span class="comment"># - the corresponding time-shift parameter,</span></span><br><span class="line"><span class="comment"># - the half duration parameter of the source,</span></span><br><span class="line"><span class="comment"># - the coordinates of the source,</span></span><br><span class="line"><span class="comment"># - the source time function of the source,</span></span><br><span class="line"><span class="comment"># - the magnitude of the force source,</span></span><br><span class="line"><span class="comment"># - the components of a (non necessarily unitary) direction vector for the force source in the E/N/Z_UP basis.</span></span><br><span class="line"><span class="comment"># The direction vector is made unitary internally in the code and thus only its direction matters here;</span></span><br><span class="line"><span class="comment"># its norm is ignored and the norm of the force used is the factor force source times the source time function.</span></span><br><span class="line"><span class="comment"># use force point source</span></span><br><span class="line">USE_FORCE_POINT_SOURCE          = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># use monochromatic source time function for CMTSOLUTION moment-tensor source.</span></span><br><span class="line"><span class="comment"># half duration is interpreted as a PERIOD just to avoid changing CMTSOLUTION file format</span></span><br><span class="line"><span class="comment"># default is .false. which uses Heaviside function</span></span><br><span class="line"><span class="comment"># use monochromatic cmt source</span></span><br><span class="line">USE_MONOCHROMATIC_CMT_SOURCE    = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># print source time function</span></span><br><span class="line"><span class="comment"># print source time function</span></span><br><span class="line">PRINT_SOURCE_TIME_FUNCTION      = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Seismograms</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># interval in time steps for temporary writing of seismograms</span></span><br><span class="line"><span class="comment"># ntstep between output seismos</span></span><br><span class="line">NTSTEP_BETWEEN_OUTPUT_SEISMOS   = 5000000</span><br><span class="line"></span><br><span class="line"><span class="comment"># set to n to reduce the sampling rate of output seismograms by a factor of n</span></span><br><span class="line"><span class="comment"># defaults to 1, which means no down-sampling</span></span><br><span class="line"><span class="comment"># ntstep between output sample</span></span><br><span class="line">NTSTEP_BETWEEN_OUTPUT_SAMPLE    = 1</span><br><span class="line"></span><br><span class="line"><span class="comment"># option to save strain seismograms</span></span><br><span class="line"><span class="comment"># this option is useful for strain Green's tensor</span></span><br><span class="line"><span class="comment"># this feature is currently under development</span></span><br><span class="line"><span class="comment"># save seismograms strain</span></span><br><span class="line">SAVE_SEISMOGRAMS_STRAIN         = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># save seismograms also when running the adjoint runs for an inverse problem</span></span><br><span class="line"><span class="comment"># (usually they are unused and not very meaningful, leave this off in almost all cases)</span></span><br><span class="line"><span class="comment"># save seismograms in adjoint run</span></span><br><span class="line">SAVE_SEISMOGRAMS_IN_ADJOINT_RUN = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># output format for the seismograms (one can use either or all of the three formats)</span></span><br><span class="line">OUTPUT_SEISMOS_ASCII_TEXT       = .<span class="literal">true</span>.</span><br><span class="line">OUTPUT_SEISMOS_SAC_ALPHANUM     = .<span class="literal">false</span>.</span><br><span class="line">OUTPUT_SEISMOS_SAC_BINARY       = .<span class="literal">false</span>.</span><br><span class="line">OUTPUT_SEISMOS_ASDF             = .<span class="literal">false</span>.</span><br><span class="line">OUTPUT_SEISMOS_3D_ARRAY         = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># rotate seismograms to Radial-Transverse-Z or use default North-East-Z reference frame</span></span><br><span class="line"><span class="comment"># rotate seismograms rt</span></span><br><span class="line">ROTATE_SEISMOGRAMS_RT           = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># decide if main process writes all the seismograms or if all processes do it in parallel</span></span><br><span class="line"><span class="comment"># write seismograms by main</span></span><br><span class="line">WRITE_SEISMOGRAMS_BY_MAIN       = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># save all seismograms in one large combined file instead of one file per seismogram</span></span><br><span class="line"><span class="comment"># to avoid overloading shared non-local file systems such as LUSTRE or GPFS for instance</span></span><br><span class="line"><span class="comment"># save all seismos in one file</span></span><br><span class="line"><span class="comment"># use binary for large file</span></span><br><span class="line">SAVE_ALL_SEISMOS_IN_ONE_FILE    = .<span class="literal">false</span>.</span><br><span class="line">USE_BINARY_FOR_LARGE_FILE       = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># flag to impose receivers at the surface or allow them to be buried</span></span><br><span class="line"><span class="comment"># receivers can be buried</span></span><br><span class="line">RECEIVERS_CAN_BE_BURIED         = .<span class="literal">true</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#  Adjoint kernel outputs</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># interval in time steps for reading adjoint traces</span></span><br><span class="line"><span class="comment"># 0 = read the whole adjoint sources at start time</span></span><br><span class="line">NTSTEP_BETWEEN_READ_ADJSRC      = 1000000</span><br><span class="line"></span><br><span class="line"><span class="comment"># use ASDF format for reading the adjoint sources</span></span><br><span class="line">READ_ADJSRC_ASDF                = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># this parameter must be set to .true. to compute anisotropic kernels</span></span><br><span class="line"><span class="comment"># in crust and mantle (related to the 21 Cij in geographical coordinates)</span></span><br><span class="line"><span class="comment"># default is .false. to compute isotropic kernels (related to alpha and beta)</span></span><br><span class="line">ANISOTROPIC_KL                  = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># output only transverse isotropic kernels (alpha_v,alpha_h,beta_v,beta_h,eta,rho)</span></span><br><span class="line"><span class="comment"># rather than fully anisotropic kernels when ANISOTROPIC_KL above is set to .true.</span></span><br><span class="line"><span class="comment"># means to save radial anisotropic kernels, i.e., sensitivity kernels for beta_v, beta_h, etc.</span></span><br><span class="line">SAVE_TRANSVERSE_KL_ONLY         = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># output only the kernels used for the current azimuthally anisotropic inversions of surface waves,</span></span><br><span class="line"><span class="comment"># i.e., bulk_c, bulk_betav, bulk_betah, eta, Gc_prime, Gs_prime and rho</span></span><br><span class="line"><span class="comment"># (Gc' &amp; Gs' which are the normalized Gc &amp; Gs kernels by isotropic \rho\beta of the 1D reference model)</span></span><br><span class="line">SAVE_AZIMUTHAL_ANISO_KL_ONLY    = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># output approximate Hessian in crust mantle region.</span></span><br><span class="line"><span class="comment"># means to save the preconditioning for gradients, they are cross correlations between forward and adjoint accelerations.</span></span><br><span class="line">APPROXIMATE_HESS_KL             = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># forces transverse isotropy for all mantle elements</span></span><br><span class="line"><span class="comment"># (default is to use transverse isotropy only between crust and 220)</span></span><br><span class="line"><span class="comment"># means we allow radial anisotropy throughout the whole crust/mantle region</span></span><br><span class="line">USE_FULL_TISO_MANTLE            = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># output kernel mask to zero out source region</span></span><br><span class="line"><span class="comment"># to remove large values near the sources in the sensitivity kernels</span></span><br><span class="line">SAVE_SOURCE_MASK                = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># output kernels on a regular grid instead of on the GLL mesh points (a bit expensive)</span></span><br><span class="line">SAVE_REGULAR_KL                 = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># compute steady state kernels for source encoding</span></span><br><span class="line">STEADY_STATE_KERNEL             = .<span class="literal">false</span>.</span><br><span class="line">STEADY_STATE_LENGTH_IN_MINUTES  = 0.d0</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Dimitri Komatitsch, July 2014, CNRS Marseille, France:</span></span><br><span class="line"><span class="comment"># added the ability to run several calculations (several earthquakes)</span></span><br><span class="line"><span class="comment"># in an embarrassingly-parallel fashion from within the same run;</span></span><br><span class="line"><span class="comment"># this can be useful when using a very large supercomputer to compute</span></span><br><span class="line"><span class="comment"># many earthquakes in a catalog, in which case it can be better from</span></span><br><span class="line"><span class="comment"># a batch job submission point of view to start fewer and much larger jobs,</span></span><br><span class="line"><span class="comment"># each of them computing several earthquakes in parallel.</span></span><br><span class="line"><span class="comment"># To turn that option on, set parameter NUMBER_OF_SIMULTANEOUS_RUNS to a value greater than 1.</span></span><br><span class="line"><span class="comment"># To implement that, we create NUMBER_OF_SIMULTANEOUS_RUNS MPI sub-communicators,</span></span><br><span class="line"><span class="comment"># each of them being labeled "my_local_mpi_comm_world", and we use them</span></span><br><span class="line"><span class="comment"># in all the routines in "src/shared/parallel.f90", except in MPI_ABORT() because in that case</span></span><br><span class="line"><span class="comment"># we need to kill the entire run.</span></span><br><span class="line"><span class="comment"># When that option is on, of course the number of processor cores used to start</span></span><br><span class="line"><span class="comment"># the code in the batch system must be a multiple of NUMBER_OF_SIMULTANEOUS_RUNS,</span></span><br><span class="line"><span class="comment"># all the individual runs must use the same number of processor cores,</span></span><br><span class="line"><span class="comment"># which as usual is NPROC in the Par_file,</span></span><br><span class="line"><span class="comment"># and thus the total number of processor cores to request from the batch system</span></span><br><span class="line"><span class="comment"># should be NUMBER_OF_SIMULTANEOUS_RUNS * NPROC.</span></span><br><span class="line"><span class="comment"># All the runs to perform must be placed in directories called run0001, run0002, run0003 and so on</span></span><br><span class="line"><span class="comment"># (with exactly four digits).</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Imagine you have 10 independent calculations to do, each of them on 100 cores; you have three options:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 1/ submit 10 jobs to the batch system</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 2/ submit a single job on 1000 cores to the batch, and in that script create a sub-array of jobs to start 10 jobs,</span></span><br><span class="line"><span class="comment"># each running on 100 cores (see e.g. http://www.schedmd.com/slurmdocs/job_array.html )</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 3/ submit a single job on 1000 cores to the batch, start SPECFEM3D on 1000 cores, create 10 sub-communicators,</span></span><br><span class="line"><span class="comment"># cd into one of 10 subdirectories (called e.g. run0001, run0002,... run0010) depending on the sub-communicator</span></span><br><span class="line"><span class="comment"># your MPI rank belongs to, and run normally on 100 cores using that sub-communicator.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The option below implements 3/.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">NUMBER_OF_SIMULTANEOUS_RUNS     = 1</span><br><span class="line"></span><br><span class="line"><span class="comment"># if we perform simultaneous runs in parallel, if only the source and receivers vary between these runs</span></span><br><span class="line"><span class="comment"># but not the mesh nor the model (velocity and density) then we can also read the mesh and model files</span></span><br><span class="line"><span class="comment"># from a single run in the beginning and broadcast them to all the others; for a large number of simultaneous</span></span><br><span class="line"><span class="comment"># runs for instance when solving inverse problems iteratively this can DRASTICALLY reduce I/Os to disk in the solver</span></span><br><span class="line"><span class="comment"># (by a factor equal to NUMBER_OF_SIMULTANEOUS_RUNS), and reducing I/Os is crucial in the case of huge runs.</span></span><br><span class="line"><span class="comment"># Thus, always set this option to .true. if the mesh and the model are the same for all simultaneous runs.</span></span><br><span class="line"><span class="comment"># In that case there is no need to duplicate the mesh and model file database (the content of the DATABASES_MPI</span></span><br><span class="line"><span class="comment"># directories) in each of the run0001, run0002,... directories, it is sufficient to have one in run0001</span></span><br><span class="line"><span class="comment"># and the code will broadcast it to the others)</span></span><br><span class="line">BROADCAST_SAME_MESH_AND_MODEL   = .<span class="literal">false</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment">#-----------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set to true to use GPUs</span></span><br><span class="line">GPU_MODE                        = .<span class="literal">false</span>.</span><br><span class="line"><span class="comment"># Only used if GPU_MODE = .true. :</span></span><br><span class="line">GPU_RUNTIME                     = 1</span><br><span class="line"><span class="comment"># 2 (OpenCL), 1 (Cuda) ou 0 (Compile-time -- does not work if configured with --with-cuda *AND* --with-opencl)</span></span><br><span class="line">GPU_PLATFORM                    = NVIDIA</span><br><span class="line">GPU_DEVICE                      = Tesla</span><br><span class="line"></span><br><span class="line"><span class="comment"># set to true to use the ADIOS library for I/Os</span></span><br><span class="line">ADIOS_ENABLED                   = .<span class="literal">false</span>.</span><br><span class="line">ADIOS_FOR_FORWARD_ARRAYS        = .<span class="literal">true</span>.</span><br><span class="line">ADIOS_FOR_MPI_ARRAYS            = .<span class="literal">true</span>.</span><br><span class="line">ADIOS_FOR_ARRAYS_SOLVER         = .<span class="literal">true</span>.</span><br><span class="line">ADIOS_FOR_SOLVER_MESHFILES      = .<span class="literal">true</span>.</span><br><span class="line">ADIOS_FOR_AVS_DX                = .<span class="literal">true</span>.</span><br><span class="line">ADIOS_FOR_KERNELS               = .<span class="literal">true</span>.</span><br><span class="line">ADIOS_FOR_MODELS                = .<span class="literal">true</span>.</span><br><span class="line">ADIOS_FOR_UNDO_ATTENUATION      = .<span class="literal">true</span>.</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">ZY</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://erbiaoger.github.io/2023/03/01/2023-03-01-specfem3d-global-shi-yong-ji-qiao/">http://erbiaoger.github.io/2023/03/01/2023-03-01-specfem3d-global-shi-yong-ji-qiao/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">ZY</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/specfem/">
+                                    <span class="chip bg-color">specfem</span>
+                                </a>
+                            
+                                <a href="/tags/forward/">
+                                    <span class="chip bg-color">forward</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'gitalk',
+        owner: 'erbiaoger',
+        admin: null,
+        id: '2023-03-01T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/04/03/2023-04-03-seismic-skill/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Seismic Skill">
+                        
+                        <span class="card-title">Seismic Skill</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZY
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/seismic/">
+                        <span class="chip bg-color">seismic</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/11/28/2022-11-28-specfem2d/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Specfem2d">
+                        
+                        <span class="card-title">Specfem2d</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZY
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/specfem/">
+                        <span class="chip bg-color">specfem</span>
+                    </a>
+                    
+                    <a href="/tags/forward/">
+                        <span class="chip bg-color">forward</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2024</span>
+            
+            <a href="/about" target="_blank">Zhiyu Zhang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/erbiaoger" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:erbiaoger@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=643747954" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 643747954" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
